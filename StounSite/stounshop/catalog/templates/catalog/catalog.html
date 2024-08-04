@@ -1,0 +1,74 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block meta_description %}
+    <meta name="description" content="Выбирайте камень, из которого хотите изделие. Мы изготовим изделие любой сложности из выбранного камня. Столешницы, лестницы, раковины, камины, панно, плитка, фонтаны и многое другое из натурального камня. Изготавливаем изделия любой сложности под заказ, собственный цех в г. Астрахань. Доставка по всей России. Широкий ассортимент мрамора, гранита, оникса и других видов камня для ваших изделий. Имеем собственное производство, более 15 лет на рынке и тысячи заказов по всей России. Интерьер, экстерьер, ландшафт. Для дома и бизнеса. Гарантия на изделия. Звоните! Работаем: ежедневно 8:00-19:00 вс-выходной">
+{% endblock %}
+{% block links %}
+<script defer src="{% static 'base/js/catalog.js' %}" type="module"></script>
+{% endblock %}
+{% block main %}
+
+<section class="catalog-page">
+    <div class="catalog-page__container container">
+        <button class="catalog-page__show-categories show-category-panel reset-button">
+            <p class="catalog-page__show-categories-title reset-text">КАТЕГОРИИ</p>
+            
+            <svg class="catalog-page__show-categories-svg" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="catalog-page__show-categories-svg" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="catalog-page__panel">
+            <h1 class="catalog-page__panel-title reset-text">Категории</h1>
+            <button class="catalog-page__close-panel-button reset-button">
+                <svg class="catalog-page__close-panel-button-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.781468 0.976835C0.466531 0.583164 0.746813 0 1.25096 0V0C1.41042 0 1.56334 0.0633449 1.6761 0.1761L7.58579 6.08579C8.36683 6.86683 8.36683 8.13317 7.58579 8.91421L1.6761 14.8239C1.56334 14.9367 1.41042 15 1.25096 15V15C0.746813 15 0.46653 14.4168 0.781467 14.0232L5.00049 8.74939C5.58484 8.01895 5.58484 6.98105 5.00049 6.25061L0.781468 0.976835Z" fill="#1A3751"/>
+                    <path d="M14.2185 0.976835C14.5335 0.583164 14.2532 0 13.749 0V0C13.5896 0 13.4367 0.0633449 13.3239 0.1761L7.41421 6.08579C6.63317 6.86683 6.63317 8.13317 7.41421 8.91421L13.3239 14.8239C13.4367 14.9367 13.5896 15 13.749 15V15C14.2532 15 14.5335 14.4168 14.2185 14.0232L9.99951 8.74939C9.41516 8.01895 9.41516 6.98105 9.99951 6.25061L14.2185 0.976835Z" fill="#1A3751"/>
+                </svg>
+            </button>
+            <div class=" catalog-page__links-block ">
+                <a href="{% url 'main' %}" class="catalog-page__link reset-link">Главная</a>
+                <svg class="catalog-page__link-arrow" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="catalog-page__links-block-active">Каталог</span>
+            </div>
+                <ul class="catalog-page__panel-list reset-list">
+                    {% for category in categories %}
+                        <li class="catalog-page__list-item">
+                            <div class="catalog-page__list-button-line"></div>
+                            <button id="category-{{category.pk}}" class="catalog-page__list-button reset-button">
+                                {{ category.name }}
+                                <div class="catalog-page__list-button-dot">
+                                    <svg class="catalog-page__list-button-dot-svg" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </li>
+                    {% endfor %}
+                    <span class="catalog-page__list-button-line last-line"></span>
+                </ul>
+        </div>
+        <div class="catalog-page__content">
+            <div class="catalog-page__content-wrapper">
+                <h2 class="catalog-page__content-title reset-text"></h2>
+                <div class="catalog-page__panel-list-container">
+                    <ul class="catalog-page__content-list reset-list">
+                
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<button class="catalog-page__hide-categories show-category-panel">
+    <svg width="24" height="70" viewBox="0 0 24 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5857 1.80879C7.29648 0.915604 7.96241 0 8.90126 0V0C9.46463 0 9.97167 0.341773 10.183 0.863986L23.6963 34.2496C23.8911 34.7309 23.8911 35.2691 23.6963 35.7504L10.183 69.136C9.97167 69.6582 9.46463 70 8.90126 70V70C7.96241 70 7.29648 69.0844 7.5857 68.1912L18.1338 35.6161C18.2635 35.2156 18.2635 34.7844 18.1338 34.3839L7.5857 1.80879Z" fill="white"/>
+        <path d="M0.469857 7.48508C0.237166 6.74961 0.786234 6 1.55764 6V6C2.02579 6 2.44644 6.28599 2.61861 6.72133L13.7091 34.7645C13.896 35.237 13.896 35.763 13.7091 36.2355L2.61861 64.2787C2.44644 64.714 2.02579 65 1.55764 65V65C0.786234 65 0.237165 64.2504 0.469857 63.5149L9.14246 36.1033C9.26667 35.7107 9.26667 35.2893 9.14246 34.8967L0.469857 7.48508Z" fill="white"/>
+    </svg>
+        
+</button>
+{% endblock %}

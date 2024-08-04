@@ -1,0 +1,563 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block meta_description %}
+    <meta name="description" content="Изделия из натурального камня любой сложности под заказ в г. Астрахань и по всей России. Столешницы, лестницы, раковины, камины, панно, плитка, фонтаны и многое другое из натурального камня. Широкий ассортимент мрамора, гранита, оникса и других видов камня для ваших изделий. Имеем собственное производство, более 15 лет на рынке и тысячи заказов по всей России. Интерьер, экстерьер, ландшафт. Для дома и бизнеса. Гарантия на изделия. Звоните! Работаем: ежедневно 8:00-19:00 вс-выходной">
+    {% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'base/package/swiper-bundle.min.css' %}">
+    <script defer src="{% static 'base/js/main.js' %}" type="module"></script>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(97753136, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/97753136" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+{% endblock %}
+{% block main %}
+
+<section class="banner">
+    <div class="swiper banner__slider">
+        <div class="banner__slider-wrapper swiper-wrapper">
+            <div class="banner__slide swiper-slide swiper-slide-1">
+            </div>
+            <div class="banner__slide swiper-slide swiper-slide-2">
+            </div>
+            <div class="banner__slide swiper-slide swiper-slide-3">
+            </div>
+        </div>
+        <div class="swiper__container container">
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </div>
+    <div class="banner__container container">
+        <div class="banner__content">
+            <h1 class="banner__title reset-text">Изготавливаем изделия <br> из природного камня любой<br>сложности</h1>
+            <h2 class="banner__subtitle reset-text">Работаем по всей России</h2>
+            <button class="banner__button reset-button">ПОДРОБНЕЕ</button>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="about__container container">
+        <h3 class="about__title section-title reset-text">О нас</h3>
+        <p class="about__text reset-text">
+            Наша компания на рынке более 15 лет, за это время построили собственный цех полного цикла производства и выполнили 3000+ заказов по всей стране. 
+            Мы предлагаем широкий спектр услуг по изготовлению изделий из натурального камня - готовы воплотить в жизнь любые ваши идеи и создать уникальные предметы интерьера и экстерьера, которые будут радовать вас своей красотой и функциональностью на протяжении многих лет.
+            <br><br>Команда опытных специалистов гарантирует высокое качество изделий и скорость их изготовления.
+            Мы уверены, что наши преимущества делают нас одним из лучших производителей изделий из натурального камня на рынке РФ.
+            Производим все необходимые замеры, разрабатываем индивидуальный дизайн по требованиям заказчика, изготавливаем, доставляем и монтируем все изделия сами, а Вам остается только наслаждаться полученным результатом.
+        </p>
+        <a href="{% url 'about' %}" class="catalog__link stoune-link-clean reset-link">ПОДРОБНЕЕ</a>
+    </div>
+</section>
+<section class="slider-section">
+    <div class="slider-section__conteiner container">
+        <ul class="slider-section__list reset-list">
+            <li class="slider-section__list-item">
+                <div class="slider-section__card">
+                    <img src="{% static 'main/img/slider/slider_1.png' %}" alt="" class="slider-section__card-img">
+                    <p class="slider-section__card-text reset-text">СОБСТВЕННОЕ<br>ПРОИЗВОДСТВО</p>
+                </div>
+            </li>
+            <li class="slider-section__list-item">
+                <div class="slider-section__card">
+                    <img src="{% static 'main/img/slider/slider_2.png' %}" alt="" class="slider-section__card-img">
+                    <p class="slider-section__card-text reset-text">ГАРАНТИЯ<br>КАЧЕСТВА</p>
+                </div>
+            </li>
+            <li class="slider-section__list-item">
+                <div class="slider-section__card">
+                    <img src="{% static 'main/img/slider/slider_3.png' %}" alt="" class="slider-section__card-img">
+                    <p class="slider-section__card-text reset-text">КАЧЕСТВЕННЫЕ<br>МАТЕРИАЛЫ</p>
+                </div>
+            </li>
+            <li class="slider-section__list-item">
+                <div class="slider-section__card">
+                    <img src="{% static 'main/img/slider/slider_4.png' %}" alt="" class="slider-section__card-img">
+                    <p class="slider-section__card-text reset-text">ИНДИВИДУАЛЬНЫЙ<br>ПОДХОД</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="services" class="services">
+    <div class="services__container container">
+        <h3 class="services__title section-title reset-text">Что мы умеем</h3>
+        <p class="services__description reset-text">
+            В нашем каталоге представлена лишь малая часть того, что мы можем изготовить, поэтому свяжитесь с нами, чтобы узнать больше о наших услугах и заказать изготовление изделий о которых Вы давно мечтали. Так же, Вы можете приехать в наш цех и увидеть все собственными глазами, вживую посмотреть ассортимент камня и примеры изделий.
+        </p>
+        <ul class="services__list reset-list">
+            <li class="services__list-item">
+                <div class="services__card">
+                    <div class="services__card-title-padding">
+                        <div class="services__card-title-block services-first-title-block">
+                            <h4 class="services__card-title reset-text">// 01 ИНТЕРЬЕР</h4>
+                        </div>
+                    </div>
+                    <div class="services__card-switcher switcher">
+                        <ul class="services__switcher-list reset-list">
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-1" class="services__switcher-button switcher-button reset-button">Столешницы</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-2" class="services__switcher-button switcher-button reset-button">Камины</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-3" class="services__switcher-button switcher-button reset-button">Лестницы</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-4" class="services__switcher-button switcher-button reset-button">Полы</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-5" class="services__switcher-button switcher-button reset-button">Панно из камня</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-6" class="services__switcher-button switcher-button reset-button">Ваш заказ</button>
+                            </li>
+                        </ul>
+                        <ul class="services__switcher-content switcher-content reset-list">
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Столешницы</h4>
+                                    <img src="{% static 'main/img/services/int/services_int_1.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Столешницы из камня могут быть признаком хорошего вкуса, так как они придают интерьеру изысканность и элегантность. Натуральный камень — это прочный и долговечный материал, который может служить десятилетиями.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Камины</h4>
+                                    <img src="{% static 'main/img/services/int/services_int_2.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Камины из камня — это действительно красиво и стильно. Они могут стать центральным элементом интерьера, создавая атмосферу уюта и тепла. Они могут быть как классическими, так и современными, в зависимости от предпочтений хозяев.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Лестницы</h4>
+                                    <img src="{% static 'main/img/services/int/services_int_3.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Лестницы из камня могут стать украшением любого дома. Они придают интерьеру изысканность и благородство, а также демонстрируют хороший вкус хозяев.
+                                        <br>Они отличаются высокой прочностью и долговечностью, а также устойчивостью к механическим воздействиям.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Полы</h4>
+                                    <img src="{% static 'main/img/services/int/services_int_4.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Полы из камня создают особую атмосферу в интерьере. Они выглядят благородно и изысканно. В зависимости от стиля интерьера можно выбрать каменные полы с гладкой или шероховатой поверхностью, различных цветов и текстур.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Панно из камня</h4>
+                                    <img src="{% static 'main/img/services/int/services_int_5.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Панно из камня — это оригинальное и стильное решение для интерьера. Панно могут иметь различные формы и размеры, что позволяет подобрать идеальный вариант для любого интерьера. Они могут использоваться для украшения стен, каминов, арок и других элементов интерьера.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Ваш заказ</h4>
+                                    <img src="{% static 'main/img/services/int/services_int_6.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Свяжитесь с нами, и мы разработаем уникальное изделие, которое идеально подойдёт под ваши требования и бюджет. Наши изделия прослужат вам долгие годы, сохраняя свою красоту и функциональность.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="services__switcher-next switcher-next-button reset-button">Далее</button>
+                    </div>
+                </div>
+            </li>
+            <li class="services__list-item">
+                <div class="services__card">
+                    <div class="services__card-title-padding">
+                        <div class="services__card-title-block services-second-title-block">
+                            <h4 class="services__card-title reset-text">// 02 ЭКСТЕРЬЕР</h4>
+                        </div>
+                    </div>
+                    <div class="services__card-switcher switcher">
+                        <ul class="services__switcher-list reset-list">
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-1" class="services__switcher-button switcher-button reset-button">Фасад</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-2" class="services__switcher-button switcher-button reset-button">Цоколь</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-3" class="services__switcher-button switcher-button reset-button">Входные группы</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-4" class="services__switcher-button switcher-button reset-button">Ваш заказ</button>
+                            </li>
+                        </ul>
+                        <ul class="services__switcher-content switcher-content reset-list">
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Фасад</h4>
+                                    <img src="{% static 'main/img/services/ext/services_ext_1.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Фасад из камня — это признак достатка и стиля. Каменные фасады выглядят дорого и респектабельно, подчёркивая хороший вкус хозяев дома.
+                                        Кроме того, каменные фасады требуют профессионального монтажа и ухода, что может повлиять на конечную стоимость проекта.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Цоколь</h4>
+                                    <img src="{% static 'main/img/services/ext/services_ext_2.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Цоколь из камня позволяет подчеркнуть стилистику здания и придать ему завершённый вид. Он защищает нижнюю часть стен от загрязнений и повреждений, а также от воздействия влаги.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Входные группы</h4>
+                                    <img src="{% static 'main/img/services/ext/services_ext_3.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Входная группа из камня — «лицо» дома. Она создаёт первое впечатление о здании и его хозяевах, подчёркивает их статус и хороший вкус. такие изделия отличаются высокой прочностью и долговечностью, а также устойчивостью к механическим воздействиям.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Ваш заказ</h4>
+                                    <img src="{% static 'main/img/services/ext/services_ext_4.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Свяжитесь с нами, и мы разработаем уникальное изделие, которое идеально подойдёт под ваши требования и бюджет. Наши изделия прослужат вам долгие годы, сохраняя свою красоту и функциональность.
+
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="services__switcher-next reset-button">Далее</button>
+                    </div>
+                </div>
+            </li>
+            <li class="services__list-item">
+                <div class="services__card">
+                    <div class="services__card-title-padding">
+                        <div class="services__card-title-block services-third-title-block">
+                            <h4 class="services__card-title reset-text">// 03 ЛАНДШАФТ</h4>
+                        </div>
+                    </div>
+                    <div class="services__card-switcher switcher">
+                        <ul class="services__switcher-list reset-list">
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-1" class="services__switcher-button switcher-button reset-button">Ступени</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-2" class="services__switcher-button switcher-button reset-button">Фонтаны</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-3" class="services__switcher-button switcher-button reset-button">Бассейны</button>
+                            </li>
+                            <li  class="switcher__list-item">
+                                <button id="switch-button-4" class="services__switcher-button switcher-button reset-button">Ваш заказ</button>
+                            </li>
+                        </ul>
+                        <ul class="services__switcher-content switcher-content reset-list">
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Ступени</h4>
+                                    <img src="{% static 'main/img/services/land/services_land_1.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Ступени и лестницы из камня — это прочные, долговечные и эстетичные элементы интерьера или экстерьера. Они могут стать украшением любого дома или общественного пространства.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Фонтаны</h4>
+                                    <img src="{% static 'main/img/services/land/services_land_2.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Фонтаны из камня — это невероятно красивое и изысканное украшение для любого ландшафта. Они могут стать центральным элементом ландшафтного дизайна, создавая атмосферу гармонии и умиротворения.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Бассейны</h4>
+                                    <img src="{% static 'main/img/services/land/services_land_3.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Бассейны из камня — это роскошное и изысканное решение для загородного дома или отеля. Они не теряют своих свойств под воздействием влаги и перепадов температур, поэтому могут быть установлены как внутри помещения, так и на открытом воздухе.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="services__switcher-content-item switcher-content-item">
+                                <div class="services__switcher-content-card">
+                                    <h4 class="services__switcher-card-title reset-text">Ваш заказ</h4>
+                                    <img src="{% static 'main/img/services/land/services_land_4.webp' %}" alt="" class="services__switcher-card-img">
+                                    <p class="services__switcher-card-description reset-text">
+                                        Свяжитесь с нами, и мы разработаем уникальное изделие, которое идеально подойдёт под ваши требования и бюджет. Наши изделия прослужат вам долгие годы, сохраняя свою красоту и функциональность.
+
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="services__switcher-next reset-button">Далее</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="portfolio">
+    <div class="portfolio__container container">
+        <h3 class="portfolio__title section-title reset-text">Наши работы</h3>
+        <ul class="portfolio__list reset-list">
+            <li class="portfolio__list-item">
+                <div class="portfolio__card">
+                    <img src="{% static 'main/img/portfolio/portfolio_1.webp' %}" alt="" class="portfolio__card-img">
+                    <h4 class="portfolio__card-title reset-text">Столешница из<br>мрамора Statuario</h4>
+                </div>
+            </li>
+            <li class="portfolio__list-item">
+                <div class="portfolio__card">
+                    <img src="{% static 'main/img/portfolio/portfolio_2.webp' %}" alt="" class="portfolio__card-img">
+                    <h4 class="portfolio__card-title reset-text">Раковина из<br>мрамора Opal White</h4>
+                </div>
+            </li>
+            <li class="portfolio__list-item">
+                <div class="portfolio__card">
+                    <img src="{% static 'main/img/portfolio/portfolio_3.webp' %}" alt="" class="portfolio__card-img">
+                    <h4 class="portfolio__card-title reset-text">Кухонный остров из<br>лабрадорита Blue Pearl</h4>
+                </div>
+            </li>
+            <li class="portfolio__list-item">
+                <div class="portfolio__card">
+                    <img src="{% static 'main/img/portfolio/portfolio_4.jpg' %}" alt="" class="portfolio__card-img">
+                    <h4 class="portfolio__card-title reset-text">Рабочий стол из<br>гранита Thunde Black</h4>
+                </div>
+            </li>
+        </ul>
+        <a href="{% url 'portfolio' %}" class="portfolio__link reset-link">
+            <p class="portfolio__link-name reset-text">ВСЕ РАБОТЫ</p>
+            <div class="portfolio__link-dot"></div>
+        </a>
+    </div>
+</section>
+<section class="catalog">
+    <div class="catalog__container container">
+        <h3 class="catalog__title section-title reset-text">Каталог камня</h3>
+        <div class="catalog__swiper mySwiper">
+            <ul class="catalog__list swiper-wrapper reset-list">
+                {% for category in categories %}
+                    <li class="catalog__list-item swiper-slide">
+                        <div id="category-{{category.pk}}" class="category__card">
+                            <img src="{{category.image.url}}" alt="" class="category__card-image">
+                            <h4 class="category__card-title reset-text">{{category.name}}</h4>
+                            <div class="category__card-line"></div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="catalog__list-button swiper-button-prev">
+            </div>
+            <div class="catalog__list-button swiper-button-next">
+            </div>
+            
+        </div>
+        <a href="{% url 'catalog' %}" class="catalog__link stoune-link-clean reset-link">ВЕСЬ КАТАЛОГ</a>
+    </div>
+</section>
+
+<section class="main-modal">
+    <div class="main-modal__wrapper">
+        <button class="main-modal__close-button reset-button">
+            <svg class="main-modal__close-button-svg" width="15" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666318 0C0.116357 0 -0.175711 0.649523 0.189251 1.06094L4.72394 6.17277C5.39574 6.93007 5.39574 8.06993 4.72394 8.82723L0.18925 13.9391C-0.175712 14.3505 0.116357 15 0.666318 15C0.824084 15 0.976251 14.9415 1.09341 14.8359L7.56225 9.00214L14.0311 14.8359C14.1483 14.9415 14.3004 15 14.4582 15C15.0081 15 15.3002 14.3505 14.9353 13.9391L10.4006 8.82723C9.72877 8.06993 9.72876 6.93007 10.4006 6.17277L14.9353 1.06094C15.3002 0.649523 15.0081 0 14.4582 0C14.3004 0 14.1483 0.0584794 14.0311 0.164137L7.56225 5.99786L1.09341 0.164137C0.976251 0.0584794 0.824084 0 0.666318 0Z" fill="#1A3751"/>
+            </svg>
+        </button>
+
+        <h2 class="main-modal__title reset-text">Свяжитесь с нами!</h2>
+        <ul class="main-modal__list reset-list">
+            <li class="main-modal__list-item">
+                <div class="main-modal__card first-modal-card">
+                    <svg class="main-modal__card-svg" width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.605966 36.8304H61.3932C61.7287 36.8304 62 36.6034 62 36.3226V0.507717C62 0.226979 61.7287 0 61.3932 0H0.605966C0.270441 0 -0.000834317 0.226979 -0.000834317 0.507717V36.3226C-0.000834317 36.6034 0.270441 36.8304 0.605966 36.8304ZM60.7793 35.8149H1.21277V1.02141H60.7793V35.8149Z" fill="white"/>
+                        <path d="M4.74121 33.3664H57.2545C57.5901 33.3664 57.8613 33.1394 57.8613 32.8586V3.97256C57.8613 3.69182 57.5901 3.46484 57.2545 3.46484H4.74121C4.40568 3.46484 4.1344 3.69182 4.1344 3.97256V32.8586C4.1344 33.1394 4.40568 33.3664 4.74121 33.3664ZM56.6477 32.345H5.34801V4.48625H56.6477V32.3509V32.345Z" fill="white"/>
+                        <path d="M21.6329 44.0503C21.6329 44.0503 21.6472 44.0503 21.6543 44.0503H40.351C40.5437 44.0503 40.7293 43.9727 40.8435 43.8413C40.9578 43.7098 40.9935 43.5426 40.9292 43.3873L38.1665 36.1718C38.088 35.9627 37.8524 35.8193 37.5882 35.8193H24.4099C24.1458 35.8193 23.9102 35.9627 23.8317 36.1718L21.1118 43.2798C21.0547 43.3574 21.019 43.447 21.019 43.5486C21.019 43.8293 21.2903 44.0563 21.6258 44.0563L21.6329 44.0503ZM39.5157 43.0289H22.4824L24.8525 36.8288H37.1385L39.5086 43.0289H39.5157Z" fill="white"/>
+                        <path d="M30.995 41.5357C32.0515 41.5357 32.9082 40.8189 32.9082 39.9349C32.9082 39.0509 32.0515 38.3281 30.995 38.3281C29.9384 38.3281 29.0818 39.0449 29.0818 39.9349C29.0818 40.8249 29.9384 41.5357 30.995 41.5357ZM30.995 39.3495C31.3805 39.3495 31.6875 39.6124 31.6875 39.9349C31.6875 40.2574 31.3734 40.5203 30.995 40.5203C30.6166 40.5203 30.2954 40.2574 30.2954 39.9349C30.2954 39.6124 30.6095 39.3495 30.995 39.3495Z" fill="white"/>
+                        <path d="M4.09867 61.9997C4.09867 61.9997 4.11294 61.9997 4.12008 61.9997H57.8827C58.0612 61.9997 58.2325 61.934 58.3467 61.8205C58.4609 61.707 58.5109 61.5577 58.4824 61.4083L55.7268 47.1146C55.6768 46.8697 55.4269 46.6846 55.1271 46.6846H6.87568C6.57584 46.6846 6.31885 46.8638 6.27602 47.1146L3.5347 61.2889C3.499 61.3486 3.48473 61.4203 3.48473 61.492C3.48473 61.7727 3.756 61.9997 4.09153 61.9997H4.09867ZM57.176 60.9783H4.82683L7.39681 47.706H54.606L57.1688 60.9783H57.176Z" fill="white"/>
+                        <path d="M10.7532 50.6756H51.2448C51.5803 50.6756 51.8516 50.4486 51.8516 50.1679C51.8516 49.8871 51.5803 49.6602 51.2448 49.6602H10.7532C10.4177 49.6602 10.1464 49.8871 10.1464 50.1679C10.1464 50.4486 10.4177 50.6756 10.7532 50.6756Z" fill="white"/>
+                        <path d="M10.7532 54.9227H51.2448C51.5803 54.9227 51.8516 54.6957 51.8516 54.4149C51.8516 54.1342 51.5803 53.9072 51.2448 53.9072H10.7532C10.4177 53.9072 10.1464 54.1342 10.1464 54.4149C10.1464 54.6957 10.4177 54.9227 10.7532 54.9227Z" fill="white"/>
+                        <path d="M11.7241 58.8895H22.0041C22.3396 58.8895 22.6109 58.6625 22.6109 58.3817C22.6109 58.101 22.3396 57.874 22.0041 57.874H11.7241C11.3886 57.874 11.1173 58.101 11.1173 58.3817C11.1173 58.6625 11.3886 58.8895 11.7241 58.8895ZM41.1147 58.8895H51.2448C51.5803 58.8895 51.8516 58.6625 51.8516 58.3817C51.8516 58.101 51.5803 57.874 51.2448 57.874H41.1147C40.7792 57.874 40.5079 58.101 40.5079 58.3817C40.5079 58.6625 40.7792 58.8895 41.1147 58.8895Z" fill="white"/>
+                        <path d="M25.6 58.8895H38.8854C39.2209 58.8895 39.4922 58.6625 39.4922 58.3817C39.4922 58.101 39.2209 57.874 38.8854 57.874H25.6C25.2645 57.874 24.9932 58.101 24.9932 58.3817C24.9932 58.6625 25.2645 58.8895 25.6 58.8895Z" fill="white"/>
+                        <path d="M31.7666 14.1641C31.7666 14.1641 31.7952 14.1641 31.8094 14.1641H31.8237C32.3806 14.1521 32.8517 13.9968 33.1944 13.7221C33.537 13.4294 33.7155 13.0352 33.7227 12.5693C33.7227 12.5454 33.7227 12.5275 33.7227 12.5036C33.7227 11.4762 32.9088 10.2338 31.4454 9.00928C30.6458 8.34029 29.7178 7.84452 28.6969 7.52794C28.033 7.33083 27.3477 7.20539 26.6623 7.15761C26.4339 7.13371 26.1983 7.24123 26.0841 7.41445C25.9699 7.58767 25.9842 7.80271 26.1269 7.96398C26.7623 8.68673 26.7766 9.39156 26.7908 10.1382C26.8051 10.855 26.8123 11.6375 27.5618 12.2646C29.0324 13.4891 30.5245 14.1641 31.7595 14.1641H31.7666ZM31.788 13.1367C31.788 13.1367 31.7309 13.1367 31.7024 13.1367C31.2312 13.1188 30.089 12.9157 28.4256 11.5359C28.0473 11.2193 28.0187 10.8012 28.0116 10.1442C28.0044 9.60062 27.9902 8.97941 27.726 8.33431C27.9188 8.37613 28.1044 8.42391 28.29 8.47767C29.1467 8.74049 29.9177 9.15861 30.5958 9.72008C32.2735 11.1238 32.5019 12.0914 32.5091 12.4677C32.5091 12.4856 32.5091 12.5095 32.5091 12.5215C32.5091 12.6648 32.4805 12.8679 32.3377 12.9874C32.2378 13.065 32.0664 13.1188 31.8594 13.1307C31.838 13.1307 31.8094 13.1307 31.788 13.1307V13.1367Z" fill="white"/>
+                        <path d="M33.0366 15.9172C33.1937 15.9172 33.3507 15.8694 33.4721 15.7679C33.7076 15.5707 33.7076 15.2482 33.4721 15.0451C33.1937 14.8122 32.9081 14.5732 32.6154 14.3283C32.5226 14.2507 32.4584 14.1671 32.4084 14.0775C32.6868 13.9819 32.9367 13.8385 33.1508 13.6653C33.365 13.4802 33.5363 13.2711 33.6505 13.0441C33.7648 13.08 33.8576 13.1397 33.9504 13.2114C34.2431 13.4503 34.5286 13.6892 34.807 13.9281C35.0426 14.1312 35.4281 14.1372 35.6708 13.9401C35.9136 13.743 35.9207 13.4204 35.6851 13.2173C35.4067 12.9724 35.114 12.7335 34.8142 12.4886C34.5429 12.2616 34.2145 12.1004 33.8718 12.0287C33.672 11.9749 33.4364 11.951 33.1937 11.963C32.901 11.9749 32.6654 12.1541 32.6225 12.399C32.5797 12.62 32.4798 12.7992 32.3013 12.9485C32.1371 13.0859 31.9087 13.1755 31.6445 13.2114C31.359 13.2472 31.1448 13.4503 31.1305 13.6892C31.1234 13.8863 31.1519 14.0894 31.2162 14.2746C31.3161 14.5673 31.5017 14.8301 31.7659 15.0511C32.0586 15.296 32.3441 15.5409 32.6297 15.7738C32.751 15.8694 32.901 15.9232 33.058 15.9232L33.0366 15.9172Z" fill="white"/>
+                        <path d="M35.006 17.5252C35.163 17.5252 35.3201 17.4774 35.4343 17.3759L37.5831 15.572C37.8187 15.3749 37.8187 15.0583 37.5831 14.8552L37.169 14.5028C36.655 14.0608 35.8626 13.3858 35.6627 13.2126C35.4272 13.0155 35.0417 13.0095 34.7989 13.2126C34.5634 13.4097 34.5634 13.7322 34.7989 13.9353C34.9988 14.1026 35.777 14.7716 36.291 15.2136L34.9917 16.3007C34.8132 16.1514 34.599 15.9781 34.392 15.8109L33.464 15.0523C33.2212 14.8552 32.8429 14.8552 32.6002 15.0523C32.3646 15.2554 32.3646 15.5779 32.6002 15.7751L33.5354 16.5396C33.9708 16.898 34.4206 17.2624 34.5633 17.3818C34.6847 17.4774 34.8346 17.5312 34.9917 17.5312L35.006 17.5252Z" fill="white"/>
+                        <path d="M45.857 24.8311C46.014 24.8311 46.1996 24.7713 46.3139 24.6758C46.6994 24.3174 46.4495 23.9291 45.8998 23.1407C44.7076 21.4204 41.7593 18.4816 37.5902 14.8559C37.476 14.7544 37.3189 14.7006 37.1547 14.7006C36.9691 14.6887 36.8335 14.7544 36.7193 14.8499L34.5705 16.6538C34.4562 16.7494 34.392 16.8808 34.392 17.0182C34.392 17.1556 34.4634 17.287 34.5776 17.3826C38.8966 20.853 42.4089 23.3199 44.472 24.3293C45.4358 24.7952 45.6571 24.8311 45.8498 24.8311H45.857ZM37.1476 15.943C40.5528 18.9296 43.1442 21.4742 44.4363 23.1048C42.4874 22.0177 39.4392 19.8495 35.8769 17.0062L37.1476 15.943Z" fill="white"/>
+                        <path d="M39.6413 29.6857C39.8055 29.6857 39.9697 29.626 40.091 29.5184C40.2481 29.3751 40.298 29.172 40.2124 28.9868L38.0208 24.3039C37.9851 24.2322 37.9351 24.1665 37.8637 24.1128L24.15 13.5164C23.9001 13.3253 23.5146 13.3372 23.2862 13.5463L19.7239 16.7718C19.6168 16.8733 19.5597 17.0047 19.5597 17.1361C19.5597 17.2735 19.6382 17.3989 19.7525 17.4885L33.4733 28.0909C33.5447 28.1446 33.6232 28.1805 33.7089 28.2044L39.4628 29.6558C39.5199 29.6678 39.577 29.6797 39.6413 29.6797V29.6857ZM36.9357 24.7877L38.6204 28.3835L34.2015 27.2666L21.0375 17.0943L23.7716 14.6155L36.9357 24.7877Z" fill="white"/>
+                        <path d="M33.5602 28.403C33.8314 28.403 34.0813 28.2477 34.1527 28.0207L34.3383 27.4115L34.8166 27.3816C35.095 27.3637 35.3306 27.1845 35.3734 26.9575L35.4948 26.3184H36.0445C36.2087 26.3184 36.3586 26.2646 36.4728 26.1691C36.587 26.0735 36.6513 25.9421 36.6513 25.8047V25.3507L37.408 25.2492C37.7435 25.2074 37.9648 24.9446 37.9148 24.6638C37.8649 24.3831 37.5436 24.192 37.2224 24.2397L35.9517 24.407C35.6518 24.4488 35.4377 24.6579 35.4377 24.9147V25.291H34.9808C34.6809 25.291 34.424 25.4702 34.3811 25.7211L34.2526 26.3901L33.8171 26.4199C33.553 26.4379 33.3388 26.5932 33.2746 26.8022L32.9819 27.7639C32.8962 28.0387 33.0961 28.3134 33.4245 28.3851C33.4745 28.397 33.5245 28.403 33.5744 28.403H33.5602Z" fill="white"/>
+                        <path d="M19.9883 17.4359C20.1454 17.4359 20.3024 17.3881 20.4166 17.2866L24.136 14.1806C24.2502 14.085 24.3145 13.9536 24.3145 13.8222C24.3145 13.6908 24.2502 13.5594 24.136 13.4638L23.1651 12.6515C22.4298 12.0302 21.1234 12.0302 20.381 12.6515L18.5891 14.1447C18.2107 14.4613 18.0109 14.8794 18.0109 15.3214C18.0109 15.7635 18.2179 16.1756 18.5891 16.4802L19.5528 17.2866C19.6742 17.3881 19.8313 17.4359 19.9812 17.4359H19.9883ZM22.8439 13.8222L19.9883 16.2114L19.4529 15.7635C19.3101 15.644 19.2316 15.4887 19.2316 15.3214C19.2316 15.1482 19.3101 14.9869 19.4529 14.8675L21.2448 13.3742C21.5303 13.1353 22.0229 13.1353 22.3013 13.3742L22.8439 13.8282V13.8222Z" fill="white"/>
+                    </svg>
+                        
+                    <p class="main-modal__card-description">Мы поможем выбрать цвет и текстуру камня, оптимально подходящие  под ваши пожелания </p>
+                </div>
+            </li>
+            <li class="main-modal__list-item">
+                <div class="main-modal__card first-modal-card">
+                    <svg class="main-modal__card-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25.8594 55.2368H38.1381C38.4383 55.2368 38.6875 55.0029 38.6875 54.7137V12.6954C38.6875 12.6154 38.6683 12.5354 38.63 12.4677L32.4907 0.295384C32.4012 0.116923 32.2096 0 31.9988 0C31.7879 0 31.5963 0.116923 31.5068 0.295384L25.3675 12.4677C25.3292 12.5415 25.31 12.6154 25.31 12.6954V54.7076C25.31 54.9968 25.5528 55.2306 25.8594 55.2306V55.2368ZM37.5951 54.1845H26.4088V12.8184L31.9988 1.72923L37.5951 12.8184V54.1845Z" fill="white"/>
+                        <path d="M28.3008 14.9153C28.4413 14.9153 28.5819 14.8599 28.6905 14.7615L30.064 13.4322L31.4439 14.7615C31.6356 14.9461 31.9358 14.9645 32.153 14.8169L34.2357 13.3646L35.5326 14.4415C35.7114 14.5892 35.967 14.6138 36.1714 14.4969L38.5671 13.1246C38.8226 12.9769 38.9121 12.6507 38.7587 12.4046C38.6054 12.1584 38.2668 12.0722 38.0113 12.2199L35.9542 13.4015L34.6318 12.2999C34.4401 12.1399 34.159 12.1276 33.9546 12.2692L31.8975 13.703L30.4601 12.3184C30.3579 12.2199 30.2173 12.1646 30.0768 12.1646C29.9299 12.1646 29.7893 12.2199 29.6871 12.3184L28.2561 13.703L26.1926 12.2692C25.9498 12.0969 25.6048 12.1522 25.4324 12.3861C25.2535 12.6199 25.311 12.9522 25.5537 13.1184L27.9941 14.8107C28.09 14.8784 28.1986 14.9092 28.3136 14.9092L28.3008 14.9153Z" fill="white"/>
+                        <path d="M28.5502 55.2359C28.8505 55.2359 29.0996 55.0021 29.0996 54.7128V14.2145C29.0996 13.9253 28.8568 13.6914 28.5502 13.6914C28.2436 13.6914 28.0008 13.9253 28.0008 14.2145V54.7067C28.0008 54.9959 28.2436 55.2298 28.5502 55.2298V55.2359Z" fill="white"/>
+                        <path d="M31.5876 55.2369C31.8879 55.2369 32.1306 55.003 32.137 54.7138L32.3223 14.0185C32.3223 13.7293 32.0795 13.4893 31.7792 13.4893C31.479 13.4893 31.2362 13.7231 31.2298 14.0123L31.0446 54.7076C31.0446 54.9969 31.2873 55.2369 31.5876 55.2369Z" fill="white"/>
+                        <path d="M35.6205 55.2371C35.9208 55.2371 36.1699 55.0032 36.1699 54.714V13.5387C36.1699 13.2495 35.9272 13.0156 35.6205 13.0156C35.3139 13.0156 35.0711 13.2495 35.0711 13.5387V54.7078C35.0711 54.9971 35.3139 55.2309 35.6205 55.2309V55.2371Z" fill="white"/>
+                        <path d="M30.4144 63.9999H33.5895C36.4004 63.9999 38.6875 61.7969 38.6875 59.0953V54.7076C38.6875 54.4184 38.4447 54.1846 38.1381 54.1846H25.8594C25.5592 54.1846 25.31 54.4184 25.31 54.7076V59.0953C25.31 61.803 27.5971 63.9999 30.408 63.9999H30.4144ZM37.5951 55.2369V59.0953C37.5951 61.2184 35.7999 62.9476 33.5895 62.9476H30.4144C28.204 62.9476 26.4088 61.2184 26.4088 59.0953V55.2369H37.5951Z" fill="white"/>
+                        <path d="M48.7918 10.6446H57.0585C57.3588 10.6446 57.6016 10.4107 57.6016 10.1215V2.14612C57.6016 1.85689 57.3588 1.62305 57.0585 1.62305H48.7918C48.4916 1.62305 48.2488 1.85689 48.2488 2.14612V10.1153C48.2488 10.4046 48.4916 10.6384 48.7918 10.6384V10.6446ZM56.5155 9.59226H49.3349V2.67535H56.5155V9.59226Z" fill="white"/>
+                        <path d="M7.08037 63.9441H15.3471C15.6473 63.9441 15.8965 63.7102 15.8965 63.421V55.4518C15.8965 55.1626 15.6537 54.9287 15.3471 54.9287H7.08037C6.78011 54.9287 6.53096 55.1626 6.53096 55.4518V63.421C6.53096 63.7102 6.77372 63.9441 7.08037 63.9441ZM14.804 62.8918H7.62978V55.9749H14.804V62.8918Z" fill="white"/>
+                        <path d="M7.08037 10.6446H15.3471C15.6473 10.6446 15.8965 10.4107 15.8965 10.1215V2.14612C15.8965 1.85689 15.6537 1.62305 15.3471 1.62305H7.08037C6.78011 1.62305 6.53096 1.85689 6.53096 2.14612V10.1153C6.53096 10.4046 6.77372 10.6384 7.08037 10.6384V10.6446ZM14.804 9.59226H7.62978V2.67535H14.804V9.59226Z" fill="white"/>
+                        <path d="M48.7918 63.9441H57.0585C57.3588 63.9441 57.6016 63.7102 57.6016 63.421V55.4518C57.6016 55.1626 57.3588 54.9287 57.0585 54.9287H48.7918C48.4916 54.9287 48.2488 55.1626 48.2488 55.4518V63.421C48.2488 63.7102 48.4916 63.9441 48.7918 63.9441ZM56.5155 62.8918H49.3349V55.9749H56.5155V62.8918Z" fill="white"/>
+                        <path d="M15.3462 59.9558H25.5294C25.8297 59.9558 26.0788 59.722 26.0788 59.4327C26.0788 59.1435 25.8361 58.9097 25.5294 58.9097H15.3462C15.0459 58.9097 14.7968 59.1435 14.7968 59.4327C14.7968 59.722 15.0395 59.9558 15.3462 59.9558ZM38.3383 59.9558H48.7963C49.0965 59.9558 49.3393 59.722 49.3393 59.4327C49.3393 59.1435 49.0965 58.9097 48.7963 58.9097H38.3383C38.0381 58.9097 37.7889 59.1435 37.7889 59.4327C37.7889 59.722 38.0317 59.9558 38.3383 59.9558ZM11.2064 55.9681C11.5067 55.9681 11.7494 55.7343 11.7494 55.445V38.042C11.7494 37.7528 11.5067 37.5189 11.2064 37.5189C10.9062 37.5189 10.657 37.7528 10.657 38.042V55.445C10.657 55.7343 10.8998 55.9681 11.2064 55.9681ZM52.9296 55.9681C53.2299 55.9681 53.4727 55.7343 53.4727 55.445V38.042C53.4727 37.7528 53.2299 37.5189 52.9296 37.5189C52.6294 37.5189 52.3866 37.7528 52.3866 38.042V55.445C52.3866 55.7343 52.6294 55.9681 52.9296 55.9681ZM11.2064 25.7528C11.5067 25.7528 11.7494 25.519 11.7494 25.2297V10.1159C11.7494 9.8267 11.5067 9.59286 11.2064 9.59286C10.9062 9.59286 10.657 9.8267 10.657 10.1159V25.2297C10.657 25.519 10.8998 25.7528 11.2064 25.7528ZM52.9296 25.7528C53.2299 25.7528 53.4727 25.519 53.4727 25.2297V10.1159C53.4727 9.8267 53.2299 9.59286 52.9296 9.59286C52.6294 9.59286 52.3866 9.8267 52.3866 10.1159V25.2297C52.3866 25.519 52.6294 25.7528 52.9296 25.7528ZM15.3462 6.65748H29.1709C29.4711 6.65748 29.7203 6.42363 29.7203 6.1344C29.7203 5.84517 29.4775 5.61133 29.1709 5.61133H15.3462C15.0459 5.61133 14.7968 5.84517 14.7968 6.1344C14.7968 6.42363 15.0395 6.65748 15.3462 6.65748ZM34.8311 6.65748H48.7963C49.0965 6.65748 49.3393 6.42363 49.3393 6.1344C49.3393 5.84517 49.0965 5.61133 48.7963 5.61133H34.8311C34.5308 5.61133 34.2816 5.84517 34.2816 6.1344C34.2816 6.42363 34.5244 6.65748 34.8311 6.65748Z" fill="white"/>
+                        <path d="M0.54315 38.5716H25.8607C26.161 38.5716 26.4101 38.3378 26.4101 38.0485V25.2301C26.4101 24.9409 26.1674 24.707 25.8607 24.707H0.54315C0.242892 24.707 0.000134837 24.9409 0.000134837 25.2301V38.0485C0.000134837 38.3378 0.242892 38.5716 0.54315 38.5716ZM25.3113 37.5193H1.08618V25.7532H25.3113V37.5193ZM38.1394 38.5716H63.457C63.7572 38.5716 64 38.3378 64 38.0485V25.2301C64 24.9409 63.7572 24.707 63.457 24.707H38.1394C37.8391 24.707 37.59 24.9409 37.59 25.2301V38.0485C37.59 38.3378 37.8328 38.5716 38.1394 38.5716ZM62.914 37.5193H38.6888V25.7532H62.914V37.5193Z" fill="white"/>
+                        <path d="M6.40957 38.5721C6.70983 38.5721 6.95898 38.3383 6.95898 38.0491V31.1383C6.95898 30.8491 6.71622 30.6152 6.40957 30.6152C6.10293 30.6152 5.86016 30.8491 5.86016 31.1383V38.0491C5.86016 38.3383 6.10293 38.5721 6.40957 38.5721Z" fill="white"/>
+                        <path d="M11.5932 38.5733C11.8934 38.5733 12.1426 38.3394 12.1426 38.0502V33.8102C12.1426 33.521 11.8998 33.2871 11.5932 33.2871C11.2865 33.2871 11.0438 33.521 11.0438 33.8102V38.0502C11.0438 38.3394 11.2865 38.5733 11.5932 38.5733Z" fill="white"/>
+                        <path d="M16.7846 38.5721C17.0848 38.5721 17.334 38.3383 17.334 38.0491V31.1383C17.334 30.8491 17.0912 30.6152 16.7846 30.6152C16.4779 30.6152 16.2352 30.8491 16.2352 31.1383V38.0491C16.2352 38.3383 16.4779 38.5721 16.7846 38.5721Z" fill="white"/>
+                        <path d="M21.9721 38.5733C22.2723 38.5733 22.5215 38.3394 22.5215 38.0502V33.8102C22.5215 33.521 22.2787 33.2871 21.9721 33.2871C21.6654 33.2871 21.4227 33.521 21.4227 33.8102V38.0502C21.4227 38.3394 21.6654 38.5733 21.9721 38.5733Z" fill="white"/>
+                        <path d="M42.7109 38.5733C43.0111 38.5733 43.2539 38.3394 43.2539 38.0502V33.8102C43.2539 33.521 43.0111 33.2871 42.7109 33.2871C42.4106 33.2871 42.1615 33.521 42.1615 33.8102V38.0502C42.1615 38.3394 42.4042 38.5733 42.7109 38.5733Z" fill="white"/>
+                        <path d="M47.8945 38.5721C48.1947 38.5721 48.4375 38.3383 48.4375 38.0491V31.1383C48.4375 30.8491 48.1947 30.6152 47.8945 30.6152C47.5942 30.6152 47.3515 30.8491 47.3515 31.1383V38.0491C47.3515 38.3383 47.5942 38.5721 47.8945 38.5721Z" fill="white"/>
+                        <path d="M53.08 38.5733C53.3803 38.5733 53.623 38.3394 53.623 38.0502V33.8102C53.623 33.521 53.3803 33.2871 53.08 33.2871C52.7798 33.2871 52.537 33.521 52.537 33.8102V38.0502C52.537 38.3394 52.7798 38.5733 53.08 38.5733Z" fill="white"/>
+                        <path d="M58.2695 38.5721C58.5697 38.5721 58.8125 38.3383 58.8125 38.0491V31.1383C58.8125 30.8491 58.5697 30.6152 58.2695 30.6152C57.9692 30.6152 57.7265 30.8491 57.7265 31.1383V38.0491C57.7265 38.3383 57.9692 38.5721 58.2695 38.5721Z" fill="white"/>
+                        </svg>
+                    <p class="main-modal__card-description">Разработаем уникальное изделие, которое идеально впишется в требования и указанный бюджет</p>
+                </div>
+            </li>
+            <li class="main-modal__list-item">
+                <div class="main-modal__card first-modal-card">
+                    <svg class="main-modal__card-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.3388 58.0373C24.3388 58.0373 24.3535 58.0373 24.3608 58.0373H63.3754C63.7207 58.0373 64 57.8035 64 57.5142V0.52308C64 0.233848 63.7207 0 63.3754 0H26.6904C26.5214 0 26.367 0.055385 26.2495 0.153847L7.84822 15.5632C7.73064 15.6616 7.6645 15.797 7.6645 15.9324V43.3849C7.6645 43.5634 7.76736 43.7234 7.94373 43.8218C8.1201 43.9203 8.34056 43.9388 8.53898 43.8649C9.97933 43.3541 11.5152 43.0957 13.1026 43.0957C19.6356 43.0957 24.9487 47.5449 24.9487 53.0157C24.9487 54.4681 24.5813 55.865 23.8611 57.1758C23.7729 57.2681 23.7215 57.3788 23.7215 57.5019C23.7215 57.7912 24.0008 58.025 24.3535 58.025L24.3388 58.0373ZM62.7434 56.985H25.3162C25.9041 55.7234 26.198 54.3942 26.198 53.0219C26.198 46.9726 20.319 42.0495 13.0952 42.0495C11.6549 42.0495 10.2512 42.2403 8.91377 42.6218V16.154L26.9476 1.05231H62.7434V56.985Z" fill="white"/>
+                        <path d="M7.80017 16.8558C7.80017 16.8558 7.81486 16.8558 7.82221 16.8558H26.2235C26.5689 16.8558 26.8555 16.6219 26.8555 16.3327V0.917192C26.8555 0.701806 26.7011 0.511035 26.466 0.431035C26.2308 0.351034 25.9589 0.394112 25.7826 0.547959L7.46211 15.8896C7.29309 15.9819 7.17552 16.1481 7.17552 16.3327C7.17552 16.6219 7.45476 16.8558 7.8075 16.8558H7.80017ZM25.5915 15.8034H9.33605L25.5915 2.19105V15.8034Z" fill="white"/>
+                        <path d="M35.6603 7.81472H54.87C55.2154 7.81472 55.502 7.58087 55.502 7.29164C55.502 7.0024 55.2227 6.76855 54.87 6.76855H35.6603C35.3149 6.76855 35.0283 7.0024 35.0283 7.29164C35.0283 7.58087 35.3076 7.81472 35.6603 7.81472Z" fill="white"/>
+                        <path d="M30.2208 14.6223H54.8758C55.2212 14.6223 55.5078 14.3885 55.5078 14.0993C55.5078 13.81 55.2286 13.5762 54.8758 13.5762H30.2208C29.8754 13.5762 29.5888 13.81 29.5888 14.0993C29.5888 14.3885 29.868 14.6223 30.2208 14.6223Z" fill="white"/>
+                        <path d="M18.8758 35.9085H54.87C55.2154 35.9085 55.502 35.6746 55.502 35.3854C55.502 35.0962 55.2227 34.8623 54.87 34.8623H18.8758C18.5304 34.8623 18.2438 35.0962 18.2438 35.3854C18.2438 35.6746 18.523 35.9085 18.8758 35.9085Z" fill="white"/>
+                        <path d="M18.8758 29.3792H54.87C55.2154 29.3792 55.502 29.1453 55.502 28.8561C55.502 28.5669 55.2227 28.333 54.87 28.333H18.8758C18.5304 28.333 18.2438 28.5669 18.2438 28.8561C18.2438 29.1453 18.523 29.3792 18.8758 29.3792Z" fill="white"/>
+                        <path d="M18.8758 22.5706H54.87C55.2154 22.5706 55.502 22.3367 55.502 22.0475C55.502 21.7583 55.2227 21.5244 54.87 21.5244H18.8758C18.5304 21.5244 18.2438 21.7583 18.2438 22.0475C18.2438 22.3367 18.523 22.5706 18.8758 22.5706Z" fill="white"/>
+                        <path d="M13.0964 63.9997C20.3202 63.9997 26.1992 59.0766 26.1992 53.0212C26.1992 46.9658 20.3202 42.0488 13.0964 42.0488C5.87259 42.0488 0.000934601 46.9719 0.000934601 53.0212C0.000934601 59.0705 5.87994 63.9997 13.0964 63.9997ZM13.0964 43.1073C19.6294 43.1073 24.9426 47.5566 24.9426 53.0274C24.9426 58.4982 19.6294 62.9536 13.0964 62.9536C6.56337 62.9536 1.25759 58.4982 1.25759 53.0274C1.25759 47.5566 6.57072 43.1073 13.0964 43.1073Z" fill="white"/>
+                        <path d="M13.6774 56.9854C13.7607 56.9854 13.8509 56.9437 13.9272 56.8743L17.7585 53.2633C18.0569 52.9855 18.1819 52.2772 18.043 51.68C17.9042 51.0828 17.5503 50.8328 17.2518 51.1106L13.6704 54.4855L7.84028 49.1106C7.54184 48.8329 7.18786 49.0967 7.05599 49.6939C6.91717 50.2912 7.04906 50.9995 7.3475 51.2633L13.4275 56.8743C13.5039 56.9437 13.5941 56.9854 13.6774 56.9854Z" fill="white"/>
+                        </svg>
+                        
+                    <p class="main-modal__card-description">Встретимся в офисе и покажем производство, образцы камня и изделий, заключим контракт 
+                        на изготовление</p>
+                </div>
+            </li>
+            <li class="main-modal__list-item">
+                <div class="main-modal__card first-modal-card">
+                    <svg class="main-modal__card-svg" width="63" height="64" viewBox="0 0 63 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.00002 57.8589V60.5733H12V59.2161V57.8589H7.00002Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M37.4102 60.3098V57.626H27.5431V60.3098V62.9997H37.4102V60.3098Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M52.9874 57.8589V59.2161V60.5733H58V57.8589H52.9874Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.8556 36.283C13.8556 37.2672 14.691 38.0742 15.7164 38.0742C16.7417 38.0742 17.5645 37.2672 17.5645 36.283C17.5645 35.2987 16.7417 34.4917 15.7164 34.4917C14.691 34.4917 13.8556 35.2987 13.8556 36.283Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M31.9259 34.4058V36.2826V38.1594H34.293V36.2826V34.4058H31.9259Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M48.3107 36.283C48.3107 37.2672 49.1461 38.0742 50.1651 38.0742C51.1841 38.0742 52.0195 37.2672 52.0195 36.283C52.0195 35.2987 51.1967 34.4917 50.1651 34.4917C49.1335 34.4917 48.3107 35.2987 48.3107 36.283Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M33.1076 12.5195C32.3544 12.5195 31.6772 12.813 31.1835 13.2837C30.6962 13.7483 30.3924 14.4086 30.3924 15.13C30.3924 15.8514 30.6962 16.5116 31.1962 16.9824L31.2215 17.013C31.7025 17.4592 32.3734 17.7466 33.1076 17.7466C33.8417 17.7466 34.5379 17.4531 35.0253 16.9824C35.5126 16.5116 35.8164 15.8514 35.8164 15.13C35.8164 14.4086 35.5126 13.7483 35.0253 13.2837C34.5316 12.813 33.8544 12.5195 33.1076 12.5195Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M35.8231 17.7587C35.1332 18.4373 34.1649 18.8591 33.1079 18.8591C32.051 18.8591 31.1142 18.4556 30.418 17.8015L30.3864 17.7648C29.6902 17.1045 29.2598 16.163 29.2598 15.136C29.2598 14.1089 29.6965 13.1797 30.3864 12.5072C31.0889 11.8347 32.0446 11.419 33.1079 11.419C34.1712 11.419 35.1332 11.8347 35.8231 12.5133C36.5256 13.1735 36.9497 14.115 36.9497 15.1299C36.9497 16.1447 36.5256 17.0923 35.8231 17.7587ZM37.2471 19.984C37.3864 19.8739 37.5256 19.7578 37.6459 19.6355C37.6522 19.6294 37.6649 19.6233 37.6649 19.6233C37.6838 19.6049 37.6902 19.5988 37.7028 19.5866L37.7345 19.5621C37.7345 19.5621 37.7851 19.5132 37.7978 19.4888C37.8231 19.4704 37.8357 19.4521 37.8547 19.4338C37.9054 19.3848 37.9433 19.3482 37.9687 19.2993C38.1079 19.1587 38.2408 18.9997 38.3547 18.8408C38.3864 18.8102 38.4117 18.7796 38.4244 18.749C38.4687 18.6879 38.5066 18.6329 38.5446 18.5779C38.6079 18.4801 38.6775 18.3884 38.7281 18.2844C38.7535 18.2477 38.7788 18.2049 38.7978 18.1683C38.7978 18.1683 38.7999 18.1622 38.8041 18.1499C38.8041 18.1499 38.8231 18.1255 38.8294 18.1132C38.8421 18.0888 38.8611 18.0643 38.8674 18.0338C39.3421 17.1657 39.6016 16.1814 39.6016 15.136C39.6016 13.3997 38.8674 11.8286 37.6902 10.6915C37.032 10.0557 36.2282 9.54825 35.3294 9.23035C35.3231 9.23035 35.3168 9.22423 35.3041 9.22423C35.1332 9.1692 34.956 9.11419 34.7725 9.06528C34.7598 9.05916 34.7345 9.05916 34.7155 9.05305C34.6902 9.04694 34.6649 9.04694 34.6459 9.03471C34.5889 9.01637 34.5256 9.00414 34.456 8.99803C34.3864 8.97969 34.3041 8.96746 34.2218 8.94912C34.0636 8.92467 33.9117 8.90021 33.7535 8.88798C33.7028 8.88187 33.6585 8.88187 33.6016 8.88187C33.437 8.86353 33.2661 8.85742 33.0953 8.85742C32.9244 8.85742 32.7535 8.86353 32.5889 8.88187C32.4117 8.88799 32.2472 8.90632 32.0763 8.93689C32.0446 8.93689 32.013 8.943 31.9813 8.95523C31.956 8.96134 31.9244 8.96135 31.8991 8.96746C31.551 9.0286 31.2218 9.1203 30.9117 9.21812H30.9054C29.994 9.53602 29.1775 10.0434 28.5067 10.6915C27.3295 11.8286 26.6016 13.3997 26.6016 15.136C26.6016 16.4381 27.0067 17.6547 27.7155 18.6573C27.9434 18.9875 28.2155 19.3054 28.5067 19.5866C28.6522 19.7272 28.8105 19.8617 28.975 19.9901C29.07 20.0757 29.1775 20.1552 29.2851 20.2163C29.3611 20.2774 29.4307 20.3263 29.513 20.3752C29.6649 20.4792 29.8294 20.5709 30.0067 20.6565C30.0256 20.6687 30.032 20.6809 30.0446 20.6809C30.2155 20.7787 30.3927 20.8521 30.5763 20.9254C30.6902 20.9805 30.8105 21.0233 30.937 21.0599C30.9687 21.0783 30.994 21.0844 31.0256 21.0905C31.0763 21.1089 31.1206 21.1211 31.1712 21.1394C31.2661 21.17 31.3674 21.1944 31.475 21.225C31.5826 21.2495 31.6902 21.2678 31.7915 21.2923C31.9307 21.3167 32.0699 21.3412 32.2092 21.3534C32.3484 21.3778 32.4877 21.3901 32.6269 21.4023C32.7788 21.4084 32.9434 21.4206 33.1079 21.4206C33.2725 21.4206 33.4307 21.4145 33.5953 21.4023C33.7408 21.384 33.8801 21.3778 34.0193 21.3534C34.4497 21.2984 34.8611 21.1944 35.2598 21.0599H35.2661C35.3864 21.0233 35.513 20.9744 35.6332 20.9193C35.8294 20.8399 36.013 20.7543 36.1965 20.6626C36.3801 20.5709 36.5573 20.4669 36.7218 20.3569C36.7282 20.3569 36.7408 20.3569 36.7408 20.3508C36.7535 20.3447 36.7725 20.3263 36.7914 20.3202C36.9307 20.2285 37.0699 20.1307 37.1965 20.0207C37.2155 20.0145 37.2282 20.0023 37.2345 19.9901H37.2408L37.2471 19.984Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M31.8008 1.6212C31.478 1.93911 31.2628 2.38539 31.2628 2.87447V7.97312L31.8008 7.86919H31.8134C31.8134 7.86919 31.8261 7.86308 31.8387 7.86308C32.0033 7.83863 32.1679 7.81417 32.3261 7.80194L32.6172 7.77749C32.7818 7.77138 32.9463 7.75916 33.1109 7.75916C33.2628 7.75916 33.4273 7.76527 33.5856 7.77749C33.6868 7.77749 33.7818 7.7836 33.8704 7.80194C34.0603 7.82029 34.2438 7.83863 34.4337 7.86919C34.6046 7.89365 34.7754 7.93033 34.959 7.97312V2.87447C34.959 2.38539 34.7438 1.93299 34.4147 1.6212C34.0856 1.29719 33.6235 1.10156 33.1172 1.10156C32.6109 1.10156 32.1425 1.29719 31.8071 1.6212H31.8008Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.2101 48.5468L32.4316 22.4972C32.2797 22.4911 32.1342 22.4728 31.9886 22.4483C31.9823 22.4422 31.9633 22.4422 31.9506 22.4422H31.9316C31.5139 22.3811 31.1152 22.2833 30.7291 22.161C30.5899 22.1182 30.4506 22.0754 30.3241 22.0204C29.881 21.8553 29.457 21.6475 29.0646 21.4152C28.9063 21.3235 28.7544 21.2195 28.6089 21.1217C28.4127 20.9811 28.2355 20.8405 28.0519 20.6815C28.0266 20.6693 27.9949 20.6449 27.9696 20.6143C27.881 20.5348 27.7861 20.4553 27.6975 20.3698C27.6279 20.2964 27.5582 20.2352 27.4949 20.1619C27.476 20.1435 27.4633 20.1313 27.4443 20.113C27.3557 20.009 27.2608 19.9174 27.1848 19.8134C27.1468 19.7706 27.1089 19.7339 27.0772 19.6973L19.4886 47.0674C19.2735 47.8254 19.4064 48.5957 19.7924 49.2377C20.1659 49.8673 20.7924 50.3625 21.5772 50.5704C22.3621 50.766 23.1658 50.6438 23.8241 50.277C24.476 49.9163 24.995 49.3049 25.2038 48.5468H25.2101Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M42.4435 50.2712C43.0954 50.6319 43.8992 50.7603 44.684 50.5646C45.4688 50.3568 46.1017 49.8616 46.4752 49.2319C46.8612 48.59 46.9878 47.8197 46.779 47.0616L39.1714 19.6304C39.1714 19.6304 39.1397 19.667 39.1207 19.6854C39.0321 19.8015 38.9309 19.9116 38.8296 20.0216C38.7916 20.0705 38.7473 20.1195 38.703 20.15C38.684 20.1745 38.6651 20.1989 38.6397 20.2234C38.6081 20.2601 38.5764 20.2906 38.5385 20.3273L38.5068 20.3579H38.5005C38.4182 20.4435 38.3296 20.5229 38.2473 20.6024C38.2283 20.6146 38.2157 20.6269 38.2094 20.633C38.0385 20.7797 37.8676 20.9264 37.6777 21.0609C37.6777 21.0609 37.6714 21.067 37.6587 21.067C37.2727 21.3422 36.8549 21.5867 36.4182 21.7945C36.26 21.874 36.1018 21.9474 35.9246 22.0024C35.8043 22.0574 35.6651 22.1063 35.5258 22.143C35.3929 22.1919 35.2537 22.2286 35.1208 22.2714C34.9815 22.3081 34.8423 22.3448 34.703 22.3692C34.5385 22.4059 34.3739 22.4303 34.203 22.4548C34.0891 22.4731 33.9752 22.4854 33.8613 22.4915C33.8549 22.4976 33.8423 22.4976 33.836 22.4915L41.0575 48.5472C41.2726 49.3053 41.7853 49.9105 42.4435 50.2773V50.2712Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M44.941 50.9233L45.1625 51.5653L47.4727 58.2779" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.2461 50.7529L20.9803 51.5293L18.6512 58.3153" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.8242 36.2822H21.3052H17.5584" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M31.9238 36.2822H29.7783H29.3605" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M37.0703 36.2822H36.488H34.2918" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M48.6426 36.2822H48.3071H44.9654H44.2312" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M50.1651 34.4922C49.1398 34.4922 48.3107 35.2992 48.3107 36.2834C48.3107 37.2677 49.1461 38.0747 50.1651 38.0747C51.1841 38.0747 52.0195 37.2677 52.0195 36.2834C52.0195 35.2992 51.1967 34.4922 50.1651 34.4922Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.7164 34.4922C14.691 34.4922 13.8556 35.2992 13.8556 36.2834C13.8556 37.2677 14.691 38.0747 15.7164 38.0747C16.7417 38.0747 17.5645 37.2677 17.5645 36.2834C17.5645 35.2992 16.7417 34.4922 15.7164 34.4922Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M34.293 36.2826V34.4058H31.9259V36.2826V38.1594H34.293V36.2826Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M37.4102 60.3098V57.626H27.5431V60.3098V62.9997H37.4102V60.3098Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 57.8564H7.00002V60.5708H12V59.2136V57.8564Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M27.5449 60.3092L18.5513 59.6795L12.0007 59.2148" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M52.9874 57.8564H58V60.5708H52.9874V59.2136V57.8564Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M37.444 60.3092L47.5642 59.5939L52.9883 59.2148" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        
+                    <p class="main-modal__card-description">Согласуем день и время для проведения 
+                        замеров, осуществим 
+                        их и приступим к изготовлению</p>
+                </div>
+            </li>
+            <li class="main-modal__list-item">
+                <div class="main-modal__card first-modal-card">
+                    <svg class="main-modal__card-svg" width="73" height="73" viewBox="0 0 73 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.80444 73.0001H64.0595C64.3276 73.0001 64.5957 72.7053 64.5957 72.4034V37.0524C64.5957 36.905 64.4648 36.7576 64.4648 36.6101L36.8372 7.94182C36.5691 7.647 36.301 7.647 36.0392 7.94182L8.41163 36.4627C8.28069 36.6101 8.2807 36.7576 8.2807 36.905V72.256C8.14976 72.6982 8.41164 73.0001 8.81691 73.0001H8.80444ZM63.5233 71.6664H9.4716V37.3542L36.432 9.13516L63.5233 37.3542V71.6664Z" fill="white"/>
+                        <path d="M0.39904 46.2631C0.529976 46.2631 0.667147 46.2631 0.798083 46.1157L36.4314 9.12907L71.9338 46.1157C72.0647 46.2631 72.3328 46.4105 72.601 46.2631C72.8691 46.1157 73 45.9683 73 45.6664V37.9448C73 37.7974 72.8691 37.65 72.8691 37.5026L36.9676 0.221119C36.6995 -0.0737065 36.4314 -0.0737065 36.1633 0.221119L0.130928 37.5026C-8.54627e-06 37.65 -3.22255e-06 37.7974 -3.22255e-06 37.9448V45.6664C-3.22255e-06 45.9613 0.130933 46.1087 0.39904 46.2631ZM36.4314 7.6409C36.3005 7.6409 36.1633 7.64091 36.0324 7.78832L1.06619 44.0308V38.2396L36.4314 1.55485L71.7966 38.2396V44.0308L36.8305 7.78832C36.6995 7.64091 36.5623 7.6409 36.4314 7.6409Z" fill="white"/>
+                        <path d="M11.2074 27.5497C11.3383 27.5497 11.4755 27.5497 11.6064 27.4023L17.748 20.8669C17.8789 20.7195 17.8789 20.5721 17.8789 20.4247V15.2231C17.8789 14.9283 17.6108 14.6265 17.3427 14.6265H11.2074C10.9393 14.6265 10.6712 14.9213 10.6712 15.2231V26.8056C10.6712 27.1004 10.8021 27.2478 11.0702 27.4023C10.9393 27.5497 11.0702 27.5497 11.2012 27.5497H11.2074ZM16.6755 20.1229L11.7374 25.3244V15.8198H16.6755V20.1299V20.1229Z" fill="white"/>
+                        <path d="M30.4293 38.688H40.1747C40.4428 38.688 40.7109 38.3932 40.7109 38.0914V30.6645C40.7109 30.3697 40.4428 30.0679 40.1747 30.0679H30.4293C30.1612 30.0679 29.8931 30.3627 29.8931 30.6645V38.0914C29.8931 38.3862 30.1612 38.688 30.4293 38.688ZM39.5076 37.3543H31.0965V31.2612H39.6385V37.3543H39.5076Z" fill="white"/>
+                        <path d="M25.7472 38.688H28.9521C29.2202 38.688 29.4883 38.3932 29.4883 38.0914V30.6645C29.4883 30.3697 29.2202 30.0679 28.9521 30.0679H25.7472C25.4791 30.0679 25.211 30.3627 25.211 30.6645V38.0914C25.0801 38.3862 25.3482 38.688 25.7472 38.688ZM28.2849 37.3543H26.2835V31.2612H28.2849V37.3543Z" fill="white"/>
+                        <path d="M28.8262 37.7962H30.4286C30.6967 37.7962 30.9648 37.5014 30.9648 37.1995V31.7031C30.9648 31.4083 30.6967 31.1064 30.4286 31.1064H28.8262C28.5581 31.1064 28.29 31.4013 28.29 31.7031V37.1995C28.29 37.4943 28.5581 37.7962 28.8262 37.7962ZM29.8924 36.4624H29.4934V32.3068H29.8924V36.4624Z" fill="white"/>
+                        <path d="M40.1643 37.503H47.1039C47.372 37.503 47.5029 37.3556 47.6401 37.2081C47.771 37.0607 47.771 36.7659 47.6401 36.6115C46.3058 33.1929 43.7681 30.9677 40.1643 30.0762C40.0333 30.0762 39.7652 30.0762 39.628 30.2236C39.4971 30.371 39.3599 30.5184 39.3599 30.8203V36.9063C39.4909 37.2011 39.759 37.503 40.1643 37.503ZM46.1686 36.1622H40.6942V31.5573C43.2319 32.3014 45.0962 33.93 46.1686 36.1622Z" fill="white"/>
+                        <path d="M33.228 64.0869H37.3681C37.6362 64.0869 37.9043 63.7921 37.9043 63.4902V54.7227C37.9043 54.4278 37.6362 54.126 37.3681 54.126H33.228C32.9599 54.126 32.6918 54.4208 32.6918 54.7227V63.4902C32.6918 63.785 32.9599 64.0869 33.228 64.0869ZM36.8319 62.7531H33.8952V55.3263H36.8319V62.7531Z" fill="white"/>
+                        <path d="M33.228 50.7216H37.3681C37.6362 50.7216 37.9043 50.4268 37.9043 50.125V38.0933C37.9043 37.7984 37.6362 37.4966 37.3681 37.4966H33.228C32.9599 37.4966 32.6918 37.7914 32.6918 38.0933V50.125C32.6918 50.4198 32.9599 50.7216 33.228 50.7216ZM36.8319 49.3879H33.8952V38.6899H36.8319V49.3879Z" fill="white"/>
+                        <path d="M35.3638 36.6121C36.43 36.6121 37.3652 35.5732 37.3652 34.3869C37.3652 33.2005 36.43 32.1616 35.3638 32.1616C34.2976 32.1616 33.3623 33.2005 33.3623 34.3869C33.3623 35.5732 34.1604 36.6121 35.3638 36.6121ZM35.3638 33.4954C35.7628 33.4954 36.1619 33.9376 36.1619 34.3869C36.1619 34.8361 35.7628 35.2783 35.3638 35.2783C34.9647 35.2783 34.5595 34.8291 34.5595 34.3869C34.5595 33.7902 34.8276 33.4954 35.3638 33.4954Z" fill="white"/>
+                        <path d="M48.8378 57.9986C50.9701 57.9986 52.8407 56.5104 53.645 54.2852C53.7759 54.1377 53.645 53.8429 53.5141 53.6885C53.3831 53.5411 53.2459 53.3937 52.9778 53.3937H48.1706V51.3158H52.9778C53.115 51.3158 53.3769 51.1684 53.5141 51.021C53.645 50.8736 53.645 50.5788 53.645 50.4243C52.9778 48.1991 50.9764 46.7109 48.8378 46.7109C46.0382 46.7109 43.7687 49.238 43.7687 52.3547C43.6377 55.4715 46.0382 57.9986 48.8378 57.9986ZM52.0426 54.7274C51.3754 55.9137 50.0411 56.6578 48.8378 56.6578C46.7054 56.6578 44.9658 54.7274 44.9658 52.3477C44.9658 49.9681 46.6991 48.0377 48.8378 48.0377C50.1721 48.0377 51.3754 48.7817 52.0426 49.9681H47.6406C47.3725 49.9681 47.1044 50.2629 47.1044 50.5647V53.9833C47.1044 54.2781 47.3725 54.58 47.6406 54.58H52.0426V54.7274Z" fill="white"/>
+                        <path d="M24.0207 57.9986C26.8203 57.9986 29.0898 55.4715 29.0898 52.3547C29.0898 49.238 26.8203 46.7109 24.0207 46.7109C21.8821 46.7109 20.0178 48.1991 19.2135 50.4243C19.0826 50.5717 19.2135 50.8736 19.3445 51.021C19.4754 51.1684 19.6126 51.3158 19.8807 51.3158H24.6879V53.3937H19.8807C19.7497 53.3937 19.4816 53.5411 19.3445 53.6885C19.2135 53.8359 19.2135 54.1307 19.2135 54.2852C20.0116 56.5104 21.8821 57.9986 24.0207 57.9986ZM24.0207 48.0447C26.1531 48.0447 27.8927 49.9751 27.8927 52.3547C27.8927 54.7344 26.1594 56.6648 24.0207 56.6648C22.6864 56.6648 21.4831 55.9207 20.8159 54.7344H25.2179C25.486 54.7344 25.7541 54.4396 25.7541 54.1377V50.7192C25.7541 50.4243 25.486 50.1225 25.2179 50.1225H20.8159C21.4831 48.7817 22.6864 48.0447 24.0207 48.0447Z" fill="white"/>
+                        <path d="M28.0204 55.325H44.8363C45.1044 55.325 45.2353 55.1775 45.3725 55.0301C45.5034 54.8827 45.5034 54.5879 45.3725 54.4335C45.1044 53.8368 44.9735 53.0997 44.9735 52.5031C44.9735 51.759 45.1044 51.1693 45.3725 50.5727C45.5034 50.4252 45.5034 50.1304 45.3725 49.976C45.2416 49.8286 45.1044 49.6812 44.8363 49.6812H28.1513C27.8832 49.6812 27.7522 49.8286 27.6151 49.976C27.4841 50.1234 27.4841 50.4182 27.6151 50.5727C27.8832 51.1693 28.0141 51.9064 28.0141 52.5031C28.0141 53.2471 27.8832 53.8438 27.6151 54.4335C27.4841 54.5809 27.4841 54.8757 27.6151 55.0301C27.746 55.1775 27.8832 55.325 28.0141 55.325H28.0204ZM43.901 53.9842H28.9556C29.0865 53.3875 29.2237 52.9453 29.2237 52.3486C29.2237 51.752 29.0928 51.3097 28.9556 50.713H43.901C43.7701 51.3097 43.6329 51.752 43.6329 52.3486C43.6329 52.9453 43.7639 53.3875 43.901 53.9842Z" fill="white"/>
+                        </svg>
+                        
+                    <p class="main-modal__card-description">По готовности изделия мы произведем монтаж и предоставим гарантию</p>
+                </div>
+            </li>
+            <li class="main-modal__list-item">
+                <div class="main-modal__card first-modal-card">
+                    <svg class="main-modal__card-svg" width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.2335 62.9939C39.8154 62.9939 47.2803 62.1883 54.622 60.462C54.8561 60.462 54.9793 60.2318 54.9793 60.0017V55.2832C55.0963 45.7251 54.9793 45.61 47.2803 41.5759C45.7405 40.7703 43.7265 39.7346 41.3552 38.4686C41.2382 38.3536 41.115 38.3536 40.998 38.4686C40.8809 38.5837 40.7639 38.5837 40.6407 38.6988L35.4301 47.9117L32.3505 45.0346C32.1103 44.8044 31.8763 44.8044 31.6422 45.0346L28.9198 47.5664L23.352 38.6988C23.235 38.4686 22.8777 38.3536 22.6437 38.4686C20.3956 39.7346 18.3815 40.7703 16.8417 41.5759C8.9026 45.7251 8.90259 45.8401 9.02578 55.3983V60.0077C9.02578 60.2379 9.14279 60.4681 9.50003 60.4681C17.199 62.1943 24.7809 62.9999 32.2458 62.9999L32.2335 62.9939ZM54.0307 59.5413C39.6984 62.7637 25.0088 62.7637 10.2022 59.5413V55.2771C10.2022 50.6677 10.0852 48.366 11.0337 46.8699C11.8652 45.3737 13.756 44.338 17.55 42.3755C18.9728 41.5699 20.7467 40.6492 22.8839 39.4984L28.4518 48.481C28.5688 48.5961 28.6858 48.7112 28.809 48.7112C28.9322 48.7112 29.1662 48.7112 29.2832 48.5961L32.1288 45.9492L35.3254 49.0565C35.4424 49.1716 35.5594 49.1715 35.7996 49.1715C35.9167 49.1715 36.1569 49.0565 36.1569 48.9414L41.4845 39.4984C43.6156 40.6492 45.5126 41.685 46.9354 42.3755C50.6063 44.3319 52.5033 45.2526 53.3348 46.7487C54.1662 48.2448 54.1662 50.5465 54.1662 55.156C54.0492 56.537 54.0492 57.918 54.0492 59.5353L54.0307 59.5413Z" fill="white"/>
+                        <path d="M20.5061 57.0024H25.3657C25.6059 57.0024 25.7229 56.8873 25.84 56.7722C25.957 56.6572 25.957 56.427 25.84 56.3119L18.3751 41.4538C18.258 41.3387 18.2581 41.2236 18.0178 41.2236H17.5436L16.8353 41.5689C15.6527 42.2594 14.5872 42.7197 13.6387 43.2952C13.4046 43.4102 13.2814 43.7555 13.4046 43.9857L19.804 56.7662C20.0442 56.8813 20.2783 56.9964 20.5123 56.9964L20.5061 57.0024ZM24.4172 55.9666H20.7464L14.7042 43.8766C15.4125 43.4163 16.361 42.956 17.4266 42.4956L17.6606 42.3805L24.4111 55.9666H24.4172Z" fill="white"/>
+                        <path d="M32.2335 62.9937C36.7359 62.9937 41.2382 62.6485 45.7406 62.0731C45.9808 62.0731 46.2148 61.8429 46.2148 61.6127V58.6205C46.2148 58.3903 45.9808 58.1602 45.7406 58.1602H18.7327C18.4925 58.1602 18.2584 58.3903 18.2584 58.6205V61.6127C18.2584 61.8429 18.4925 62.0731 18.7327 62.0731C23.118 62.6485 27.7374 62.9937 32.2335 62.9937ZM45.1431 61.1524C36.6127 62.3032 27.8482 62.3032 19.2008 61.1524V59.0808H45.1431V61.1524Z" fill="white"/>
+                        <path d="M31.8802 35.9318C39.5792 35.9318 43.4902 25.3379 43.4902 19.6927C43.4902 19.0021 43.4902 18.4267 43.2562 17.7362C43.2562 17.506 43.016 17.2759 42.7819 17.2759H20.8677C20.6275 17.2759 20.3934 17.506 20.3934 17.7362C20.2764 18.4267 20.1593 19.1172 20.1593 19.6927C20.2764 25.3379 24.3045 35.9318 31.8864 35.9318H31.8802ZM42.4247 18.3116C42.5417 18.772 42.5417 19.2323 42.5417 19.6927C42.5417 22.6849 41.4762 26.4887 39.6962 29.3659C38.2734 31.8977 35.6681 34.7809 31.8802 34.7809C28.0923 34.7809 25.604 31.7887 24.0642 29.3659C22.4074 26.4887 21.2187 22.6849 21.2187 19.6927C21.2187 19.2323 21.2187 18.772 21.3357 18.3116H42.4247Z" fill="white"/>
+                        <path d="M28.9202 48.7108C29.0373 48.7108 29.1543 48.7108 29.2775 48.5957L32.4741 45.7186C32.7081 45.4884 32.7081 45.2583 32.5911 45.0281L26.0747 36.2756C25.9577 36.1605 25.8407 36.0454 25.7175 36.0454C25.5943 36.0454 25.3602 36.0454 25.3602 36.1605L22.872 38.4622C22.6317 38.5773 22.6317 38.9225 22.7549 39.1527L28.5568 48.4807C28.4398 48.5957 28.6739 48.7108 28.9141 48.7108C28.8361 48.7108 28.8361 48.7108 28.9141 48.7108H28.9202ZM31.4085 45.2583L29.0373 47.4449L23.7034 39.0376L25.4834 37.4264L31.4085 45.2583Z" fill="white"/>
+                        <path d="M35.6681 49.1712C35.9083 49.1712 36.0253 49.0561 36.1424 48.941L41.7102 39.0376C41.8273 38.8075 41.8273 38.5773 41.5932 38.4622L39.1049 36.1605C38.9879 36.0454 38.8709 36.0454 38.7477 36.0454C38.6245 36.0454 38.5136 36.1605 38.3904 36.2756L31.8741 45.0281C31.757 45.2583 31.757 45.4884 31.8741 45.7186L35.4279 49.1712H35.6619H35.6681ZM40.5277 38.9225L35.5511 47.7901L32.8287 45.1432L38.7538 37.3114L40.5338 38.9225H40.5277Z" fill="white"/>
+                        <path d="M29.1538 23.8408C29.3878 23.8408 29.511 23.7258 29.628 23.4956C29.7451 23.2654 29.628 22.9202 29.3878 22.8051C29.1538 22.69 26.7825 21.7693 25.5999 22.9202C25.3597 23.1503 25.3597 23.4956 25.5999 23.6107C25.834 23.8408 26.1912 23.8408 26.3082 23.6107C26.8995 23.0352 28.4393 23.4956 28.9136 23.7258C28.9136 23.8408 29.0306 23.8408 29.1476 23.8408H29.1538Z" fill="white"/>
+                        <path d="M34.7214 23.8395H34.9554C35.4297 23.6094 36.9695 23.149 37.5607 23.7244C37.801 23.9546 38.152 23.9546 38.2691 23.7244C38.5093 23.4943 38.5093 23.149 38.2691 23.0339C37.0865 21.8831 34.7152 22.8038 34.4812 22.9188C34.241 23.0339 34.1239 23.3792 34.241 23.6094C34.241 23.7244 34.4812 23.8395 34.7152 23.8395H34.7214Z" fill="white"/>
+                        <path d="M34.6019 2.76203C34.836 2.76203 35.0762 2.53186 35.0762 2.30169V2.1866C35.0762 2.07152 35.0762 1.84135 34.9591 1.72627C34.8421 1.61118 34.7251 1.49609 34.4849 1.49609C34.2447 1.49609 34.0106 1.72626 34.0106 1.95643V2.1866C34.1277 2.53186 34.3679 2.76203 34.6019 2.76203Z" fill="white"/>
+                        <path d="M19.6841 14.6288H44.5609C44.8011 14.6288 45.0352 14.3986 45.0352 14.1685V13.8232C45.0352 8.98357 42.1896 4.49525 37.6935 2.42372C37.5764 2.30863 37.3362 2.30863 37.2192 2.42372C37.1022 2.5388 36.979 2.65388 36.979 2.88405V5.6461C36.979 5.76119 36.862 5.87627 36.7449 5.87627H35.5624C35.4453 5.87627 35.3283 5.76119 35.3283 5.6461C35.3283 5.41593 35.0943 5.18576 34.737 5.18576C34.503 5.18576 34.2628 5.41593 34.2628 5.6461V7.48746C34.2628 7.9478 33.7885 8.40814 33.3143 8.40814H31.1832C30.709 8.40814 30.2347 7.9478 30.2347 7.48746V5.6461C30.2347 5.41593 30.0007 5.18576 29.7605 5.18576C29.5202 5.18576 29.2862 5.41593 29.1692 5.6461C29.1692 5.76119 29.0522 5.87627 28.9351 5.87627H27.7526C27.6355 5.87627 27.5124 5.76119 27.5124 5.6461V2.88405C27.5124 2.65388 27.3953 2.5388 27.2783 2.42372C27.1613 2.30863 26.9211 2.30863 26.804 2.42372C22.3017 4.49525 19.4623 8.98963 19.4623 13.8232V14.1685C19.2221 14.3986 19.4623 14.6288 19.6964 14.6288H19.6841ZM43.9696 13.593H20.2754C20.2754 9.56505 22.6466 5.76118 26.2005 3.80474V5.6461C26.2005 6.33661 26.7917 6.91204 27.5 6.91204H28.9228V7.48746C28.9228 8.52323 29.8713 9.4439 30.9369 9.4439H33.0679C34.1335 9.4439 35.082 8.52323 35.082 7.48746V6.91204H36.5047C37.213 6.91204 37.8105 6.33661 37.8105 5.6461V3.80474C41.5984 5.76118 43.9696 9.56505 43.9696 13.593Z" fill="white"/>
+                        <path d="M29.6312 2.76315C29.8653 2.76315 30.1055 2.53298 30.1055 2.30281V2.07264C30.1055 1.84247 29.8714 1.6123 29.6312 1.6123C29.5142 1.6123 29.274 1.72738 29.157 1.84247C29.0399 1.95755 29.0399 2.18773 29.0399 2.30281C29.0399 2.53298 29.274 2.76315 29.6312 2.76315Z" fill="white"/>
+                        <path d="M19.4433 18.3113H44.7944C45.7429 18.3113 46.4512 17.6208 46.4512 16.7001V15.204C46.4512 14.2833 45.7429 13.5928 44.7944 13.5928H19.4433C18.4948 13.5928 17.7865 14.2833 17.7865 15.204V16.7001C17.7865 17.6208 18.4948 18.3113 19.4433 18.3113ZM44.7944 14.6285C45.1516 14.6285 45.3856 14.8587 45.3856 15.204V16.7001C45.3856 17.0453 45.1454 17.2755 44.7944 17.2755H19.4433C19.086 17.2755 18.852 17.0453 18.852 16.7001V15.204C18.852 14.8587 19.086 14.6285 19.4433 14.6285H44.7944Z" fill="white"/>
+                        <path d="M31.0541 9.55812H33.1852C34.2507 9.55812 35.1992 8.63744 35.1992 7.60167V1.95644C35.1992 0.920678 34.2507 0 33.1852 0H31.0541C30.4628 0 29.9886 0.230168 29.6314 0.575423C29.2741 0.920679 29.0401 1.4961 29.0401 1.95644V7.60167C29.0401 8.63744 29.9886 9.55812 31.0541 9.55812ZM33.1852 0.920683C33.6594 0.920683 34.1337 1.38102 34.1337 1.84136V7.48659C34.1337 7.94693 33.6594 8.40727 33.1852 8.40727H31.0541C30.5799 8.40727 30.1056 7.94693 30.1056 7.48659V1.84136C30.1056 1.61119 30.2226 1.38102 30.3458 1.15085C30.5798 0.920677 30.8201 0.920683 31.0541 0.920683H33.1852Z" fill="white"/>
+                        <path d="M26.5495 12.3191H29.2718C29.5059 12.3191 29.7461 12.0889 29.7461 11.8588C29.7461 11.6286 29.5059 11.3984 29.2718 11.3984H26.5495C26.3155 11.3984 26.0752 11.6286 26.0752 11.8588C26.0752 12.0889 26.3155 12.3191 26.5495 12.3191Z" fill="white"/>
+                        <path d="M31.6405 12.3191H41.1195C41.3597 12.3191 41.5938 12.0889 41.5938 11.8588C41.5938 11.6286 41.3597 11.3984 41.1195 11.3984H31.6405C31.4003 11.3984 31.1663 11.6286 31.1663 11.8588C31.1663 12.0889 31.4003 12.3191 31.6405 12.3191Z" fill="white"/>
+                        <path d="M35.4336 7.02593H36.6161C37.3244 7.02593 37.9219 6.4505 37.9219 5.75999V2.30744C37.9219 1.96218 37.8049 1.61692 37.5647 1.38675C37.3306 1.15658 36.9734 1.0415 36.6161 1.0415H35.4336C34.7253 1.0415 34.1279 1.61693 34.1279 2.42252V5.87507C34.1279 6.4505 34.7191 7.02593 35.4336 7.02593ZM36.6161 1.95612C36.6942 1.95612 36.7722 1.99449 36.8502 2.07121C36.8502 2.07121 36.9672 2.1863 36.9672 2.30138V5.75393C36.9672 5.86902 36.8502 5.98411 36.7332 5.98411H35.5506C35.4336 5.98411 35.3166 5.86902 35.3166 5.75393V2.30138C35.3166 2.1863 35.4336 1.95612 35.5506 1.95612H36.6161Z" fill="white"/>
+                        <path d="M27.6172 7.02593H28.7997C29.508 7.02593 30.1055 6.4505 30.1055 5.75999V2.30744C30.1055 1.96218 29.9884 1.61692 29.7482 1.38675C29.508 1.15658 29.157 1.0415 28.7997 1.0415H27.6172C26.9089 1.0415 26.3114 1.61693 26.3114 2.42252V5.87507C26.1944 6.4505 26.9027 7.02593 27.6172 7.02593ZM28.7997 1.95612C28.8777 1.95612 28.9578 1.99449 29.0399 2.07121C29.0399 2.07121 29.157 2.1863 29.157 2.30138V5.75393C29.157 5.86902 29.0399 5.98411 28.9229 5.98411H27.7404C27.6233 5.98411 27.5001 5.86902 27.5001 5.75393V2.30138C27.5001 2.1863 27.6172 1.95612 27.7404 1.95612H28.8059H28.7997Z" fill="white"/>
+                        <path d="M32.1146 31.9025C33.0631 31.9025 34.0116 31.5573 34.837 30.9818C35.0772 30.8667 35.1942 30.5215 34.954 30.2913C34.837 30.0612 34.4797 29.9461 34.2457 30.1762C32.8229 31.0969 31.4001 31.0969 29.8604 30.1762C29.6263 30.0612 29.2691 30.0612 29.1521 30.2913C29.035 30.5215 29.035 30.8667 29.2691 30.9818C30.2176 31.6723 31.1661 31.9025 32.1146 31.9025Z" fill="white"/>
+                        <path d="M38.635 57.0046H43.4945C43.7286 57.0046 43.8518 56.8895 43.9688 56.6593L50.3682 43.8728C50.4852 43.6426 50.3682 43.2973 50.1341 43.1823C49.3026 42.7219 48.2371 42.1465 47.0545 41.5711L46.223 41.1107C46.106 40.9956 45.989 40.9956 45.7488 41.1107C45.6318 41.1107 45.5147 41.2258 45.3916 41.3409L37.9266 56.199C37.8096 56.3141 37.8096 56.5442 37.9266 56.6593C38.2839 56.8895 38.4009 57.0046 38.635 57.0046ZM43.1373 55.9688H39.4664L46.2169 42.3827L46.5741 42.4978C47.5226 42.9582 48.3541 43.4185 49.1794 43.8788L43.1373 55.9688Z" fill="white"/>
+                        <path d="M23.944 59.074H24.1842C24.4182 58.9589 24.5414 58.6137 24.4182 58.3835L23.4697 56.3119C23.3527 56.0818 22.9955 55.9667 22.7614 56.0818C22.5212 56.1969 22.4042 56.5421 22.5212 56.7723L23.4697 58.8438C23.4697 58.9589 23.7038 59.074 23.944 59.074Z" fill="white"/>
+                        <path d="M40.0528 59.0748C40.2869 59.0748 40.41 58.9597 40.5271 58.7296L41.4756 56.658C41.5926 56.4279 41.4756 56.0826 41.2415 55.9675C41.0013 55.8524 40.6502 55.9675 40.5332 56.1977L39.5847 58.2692C39.4677 58.4994 39.5847 58.8446 39.8249 58.9597C39.9029 59.0364 39.9809 59.0748 40.059 59.0748H40.0528Z" fill="white"/>
+                        </svg>
+                        
+                    <p class="main-modal__card-description">Наш камень веками 
+                        был частью природы 
+                        и прослужит вам 
+                        столько же, сохраняя 
+                        свою красоту и функциональность</p>
+                </div>
+            </li>
+        </ul>
+        <h3 class="main-modal__subtitle">
+            Позвоните сегодня, и мы поможем вам воплотить в жизнь 
+            вашу мечту об идеальном интерьере или экстерьере!</h3>
+        <h4 class="main-modal__number reset-text">+7 (927) 073-97-34</h4>
+    </div>
+</section>
+
+{% endblock %}

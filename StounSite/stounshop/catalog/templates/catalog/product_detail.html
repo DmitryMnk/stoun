@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% block meta_description %}
+    <meta name="description" content="Выбирайте камень, из которого хотите изделие. Мы изготовим изделие любой сложности из выбранного камня. Столешницы, лестницы, раковины, камины, панно, плитка, фонтаны и многое другое из натурального камня. Изготавливаем изделия любой сложности под заказ, собственный цех в г. Астрахань. Доставка по всей России. Широкий ассортимент мрамора, гранита, оникса и других видов камня для ваших изделий. Имеем собственное производство, более 15 лет на рынке и тысячи заказов по всей России. Интерьер, экстерьер, ландшафт. Для дома и бизнеса. Гарантия на изделия. Звоните! Работаем: ежедневно 8:00-19:00 вс-выходной">
+
+{% endblock %}
+{% load static %}
+{% block main %}
+    <section class="stoun">
+        <div class="stoun__container container">
+            <div class="stoun__links-block">
+                <a href="{% url 'main' %}" class="catalog-page__link reset-link">Главная</a>
+                <svg class="catalog-page__link-arrow" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <a href="{% url 'catalog' %}" class="catalog-page__link reset-link">Камень</a>
+                <svg class="catalog-page__link-arrow" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg><a href="{% url 'catalog' %}" class="catalog-page__link reset-link">{{ object.category.name }}</a>
+                <svg class="catalog-page__link-arrow" width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74609 1.41705L9.28028 7.58341L1.71652 13.7144" stroke="#CCCCCC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="catalog-page__links-block-active">{{object.name}}</span>
+            </div>
+            <div class="stoun__card">
+                <h2 class="stoun__card-title reset-text">{{object.category.name}} {{ object.name }}</h2>
+                <div class="stoun__card-description-block">
+                    <p class="stoun__card-description reset-text">
+                        {{object.description}}
+                    </p>
+                
+                    <div class="stoun__card-content">
+                        <img src="{{object.image.url}}" alt="" class="stoun__card-img">
+                        <div class="stoun__card-content-info">
+                            <div class="stoun__card-content-info-item stoun-color-info">
+                                <p class="stoun__card-content-info-item-label">Цвет:</p>
+                                <p class="stoun__card-content-info-item-text">{{object.color}}</p>
+                            </div>
+                            <div class="stoun__card-content-info-item">
+                                <p class="stoun__card-content-info-item-label">Страна:</p>
+                                <p class="stoun__card-content-info-item-text">{{object.country}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'FuturaNew-Demi';
+    src: local('Futura New Demi Reg'), local('Futura-New-Demi-Reg'),
+        url('../fonts/FuturaNewDemi-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewDemi-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewDemi-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaNew-Medium';
+    src: local('Futura New Medium Reg'), local('Futura-New-Medium-Reg'),
+        url('../fonts/FuturaNewMedium-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewMedium-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewMedium-Reg.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaNew-Book';
+    src: local('Futura New Book Reg'), local('Futura-New-Book-Reg'),
+        url('../fonts/FuturaNewBook-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewBook-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewBook-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaNew-Light';
+    src: local('Futura New Light Reg'), local('Futura-New-Light-Reg'),
+        url('../fonts/FuturaNewLight-Reg.woff2') format('woff2'),
+        url('../fonts/FuturaNewLight-Reg.woff') format('woff'),
+        url('../fonts/FuturaNewLight-Reg.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond-Bold';
+    src: local('Adobe Garamond LT Bold'), local('Adobe-Garamond-LT-Bold'),
+        url('../fonts/AGaramondLT-Bold.woff2') format('woff2'),
+        url('../fonts/AGaramondLT-Bold.woff') format('woff'),
+        url('../fonts/AGaramondLT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MontserratRegular';
+    src: url('../fonts/MontserratRegular.eot');
+    src: url('../fonts/MontserratRegular.woff2') format('woff2'),
+         url('../fonts/MontserratRegular.woff') format('woff'),
+         url('../fonts/MontserratRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MontserratAlternates-Regular';
+    src: url('../fonts/MontserratAlternates-Regular.eot');
+    src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+         url('../fonts/MontserratAlternates-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MontserratSemiBold';
+    src: url('../fonts/MontserratSemiBold.eot');
+    src: url('../fonts/MontserratSemiBold.woff2') format('woff2'),
+         url('../fonts/MontserratSemiBold.woff') format('woff'),
+         url('../fonts/MontserratSemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MontserratMedium';
+    src: url('../fonts/MontserratMedium.eot');
+    src: url('../fonts/MontserratMedium.woff2') format('woff2'),
+         url('../fonts/MontserratMedium.woff') format('woff'),
+         url('../fonts/MontserratMedium.ttf') format('truetype');
+}

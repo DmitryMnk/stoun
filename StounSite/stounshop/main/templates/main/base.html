@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta_description %}
+    {% endblock %}
+    <link rel="canonical" href="https://xn----7sbbrpmcrj5alb3lrb.xn--p1ai"/>
+    <link rel="icon" href="https://xn----7sbbrpmcrj5alb3lrb.xn--p1ai/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'base/img/favicon.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'base/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/fonts.css' %}">
+    {% block links %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/media.css' %}">
+    <script defer type="module" src="{% static 'base/js/base.js' %}"></script>
+    <title>{{title}}</title>
+</head>
+<body>
+    <header class="header first-header">
+        <div class="header__container container">
+            <a href="{% url 'main' %}" class="header__logo-link">
+                <img src="{% static 'base/img/logo.png' %}" alt="Главная" class="header__logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav-list reset-list">
+                    <li class="header__nav-list-item">
+                        <a href="{% url 'catalog' %}" class="stoune-link-clean header__nav-list-link header-stoun-link reset-link">
+                            <div class="header__nav-list-item-lines">
+                                <div class="header__nav-list-item-lines-item first-line"></div>
+                                <div class="header__nav-list-item-lines-item second-line"></div>
+                                <div class="header__nav-list-item-lines-item third-line"></div>
+                            </div>
+                            КАМЕНЬ
+                        </a>
+                    </li>
+                    <div class="header__nav-dot"></div>
+                    <li class="header__nav-list-item">
+                        <a href="{% url 'main' %}#services" class="header__nav-list-link reset-link">УСЛУГИ</a>
+                    </li>
+                    <div class="header__nav-dot"></div>
+                    <li class="header__nav-list-item">
+                        <a href="{% url 'portfolio' %}" class="header__nav-list-link reset-link">ПОРТФОЛИО</a>
+                    </li>
+                    <div class="header__nav-dot"></div>
+                    <li class="header__nav-list-item">
+                        <a href="{% url 'about' %}" class="header__nav-list-link reset-link">О НАС</a>
+                    </li>
+                    <div class="header__nav-dot"></div>
+                    <li class="header__nav-list-item">
+                        <a href="{% url 'contacts' %}" class="header__nav-list-link reset-link">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+                <div class="header__number">
+                    <p class="header__number-text reset-text">+7 (927) 073-97-34</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <header class="hidden-header">
+        <div class="hidden-header__container">
+            <nav class="hidden-header__nav">
+                <ul class="hidden-header__nav-list reset-list">
+                    <li class="hidden-header__nav-list-item">
+                        <a href="{% url 'catalog' %}" class="stoune-link-clean hidden-header__nav-list-link header-stoun-link reset-link">
+                            <div class="hidden-header__nav-list-item-lines">
+                                <div class="hidden-header__nav-list-item-lines-item first-line"></div>
+                                <div class="hidden-header__nav-list-item-lines-item second-line"></div>
+                                <div class="hidden-header__nav-list-item-lines-item third-line"></div>
+                            </div>
+                            КАМЕНЬ
+                        </a>
+                    </li>
+                    <div class="hidden-header__nav-dot"></div>
+                    <li class="hidden-header__nav-list-item">
+                        <a href="{% url 'main' %}" class="hidden-header__nav-list-link reset-link">ГЛАВНАЯ</a>
+                    </li>
+                    <div class="hidden-header__nav-dot"></div>
+                    <li class="hidden-header__nav-list-item">
+                        <a href="{% url 'main' %}#services" class="hidden-header__nav-list-link reset-link">УСЛУГИ</a>
+                    </li>
+                    <div class="hidden-header__nav-dot"></div>
+                    <li class="hidden-header__nav-list-item">
+                        <a href="{% url 'portfolio' %}" class="hidden-header__nav-list-link reset-link">ПОРТФОЛИО</a>
+                    </li>
+                    <div class="hidden-header__nav-dot"></div>
+                    <li class="hidden-header__nav-list-item">
+                        <a href="{% url 'about' %}" class="hidden-header__nav-list-link reset-link">О НАС</a>
+                    </li>
+                    <div class="hidden-header__nav-dot"></div>
+                    <li class="hidden-header__nav-list-item">
+                        <a href="{% url 'contacts' %}" class="hidden-header__nav-list-link reset-link">КОНТАКТЫ</a>
+                    </li>
+                </ul>
+        </nav>
+        </div>
+        
+    </header>
+    <header class="header__burger">
+        <nav class="header__burger-nav">
+            <img src="{% static 'base/img/burger-logo.png' %}" alt="" class="header__burger-logo">
+            <ul class="header__burger-nav-list reset-list">
+                <li class="header__burger-nav-list-item">
+                    <a href="{% url 'main' %}" class="header__burger-nav-link reset-link">ГЛАВНАЯ</a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a href="{% url 'catalog' %}" class="stoune-link-clean header__burger-nav-link reset-link">КАМЕНЬ</a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a href="{% url 'main' %}#services" class="header__burger-nav-link reset-link">УСЛУГИ</a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a href="{% url 'portfolio' %}" class="header__burger-nav-link reset-link">ПОРТФОЛИО</a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a href="{% url 'about' %}" class="header__burger-nav-link reset-link">О НАС</a>
+                </li>
+                <li class="header__burger-nav-list-item">
+                    <a href="{% url 'contacts' %}" class="header__burger-nav-link reset-link">КОНТАКТЫ</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="header__burger-button reset-button">
+            <span class="header__burger-line burger-first-line"></span>
+            <span class="header__burger-line burger-second-line"></span>
+            <span class="header__burger-line burger-third-line"></span>
+        </button>
+    </header>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__top">
+                <a href="{% url 'main' %}" class="footer__main-link">
+                    <img src="{% static 'base/img/logo.png' %}" alt="" class="footer__logo">
+                </a>
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list reset-list">
+                        <li class="footer__nav-list-item">
+                            <a href="{% url 'catalog' %}" class="stoune-link-clean footer__nav-link reset-link">КАМЕНЬ</a>
+                        </li>
+                        <div class="footer__nav-dot"></div>
+                        <li class="footer__nav-list-item">
+                            <a href="{% url 'main' %}#services" class="footer__nav-link reset-link">УСЛУГИ</a>
+                        </li>
+                        <div class="footer__nav-dot"></div>
+                        <li class="footer__nav-list-item">
+                            <a href="{% url 'portfolio' %}" class="footer__nav-link reset-link">ПОРТФОЛИО</a>
+                        </li>
+                        <div class="footer__nav-dot"></div>
+                        <li class="footer__nav-list-item">
+                            <a href="{% url 'about' %}" class="footer__nav-link reset-link">О НАС</a>
+                        </li>
+                        <div class="footer__nav-dot"></div>
+                        <li class="footer__nav-list-item">
+                            <a href="{% url 'contacts' %}" class="footer__nav-link reset-link">КОНТАКТЫ</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <div class="footer__contacts-block footer-phone-block">
+                        <p class="footer__contacts-info reset-text">+7 (927) 073-97-34</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

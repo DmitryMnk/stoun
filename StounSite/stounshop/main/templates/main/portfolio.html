@@ -1,0 +1,123 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block meta_description %}
+    <meta name="description" content="Наши Изделия из натурального камня. Столешницы, лестницы, раковины, камины, панно, плитка, фонтаны и многое другое из натурального камня. Изготавливаем изделия любой сложности под заказ, собственный цех в г. Астрахань. Доставка по всей России. Широкий ассортимент мрамора, гранита, оникса и других видов камня для ваших изделий. Имеем собственное производство, более 15 лет на рынке и тысячи заказов по всей России. Интерьер, экстерьер, ландшафт. Для дома и бизнеса. Гарантия на изделия. Звоните! Работаем: ежедневно 8:00-19:00 вс-выходной">
+{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'base/package/swiper-bundle.min.css' %}">
+    <script defer src="{% static 'base/js/portfolio.js' %}" type="module"></script>
+{% endblock %}
+{% block main %}
+    <section class="our-works">
+        <div class="our-works__container container">
+            <h1 class="contacts__title reset-text">Наши работы</h1> 
+            <ul class="our-works__list reset-list">
+
+                <li class="our-works__list-item">
+                    <div class="our-works__list-item-card">
+                        <h3 class="our-works__card-title reset-text">Камины</h3>
+                        <img src="{% static 'main/img/our-works/fireplace_1.webp' %}" alt="" class="our-works__card-main-img our-work-picture">
+                        <div class="our-works__card-images our-works-swiper">
+                            <div class="our-works__card-swiper swiper-wrapper">
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/fireplace_2.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/fireplace_3.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/fireplace_4.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/fireplace_5.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/fireplace_6.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="our-works__list-item">
+                    <div class="our-works__list-item-card">
+                        <h3 class="our-works__card-title reset-text">Столешницы</h3>
+                        <img src="{% static 'main/img/our-works/table_1.webp' %}" alt="" class="our-works__card-main-img our-work-picture">
+                        <div class="our-works__card-images our-works-swiper">
+                            <div class="our-works__card-swiper swiper-wrapper">
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/table_2.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/table_3.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/table_4.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/table_5.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/table_6.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="our-works__list-item">
+                    <div class="our-works__list-item-card">
+                        <h3 class="our-works__card-title reset-text">Лестницы</h3>
+                        <img src="{% static 'main/img/our-works/stair_1.webp' %}" alt="" class="our-works__card-main-img our-work-picture">
+                        <div class="our-works__card-images our-works-swiper">
+                            <div class="our-works__card-swiper swiper-wrapper">
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/stair_2.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/stair_3.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/stair_4.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/stair_5.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="our-works__list-item">
+                    <div class="our-works__list-item-card">
+                        <h3 class="our-works__card-title reset-text">Раковины</h3>
+                        <img src="{% static 'main/img/our-works/bath_1.webp' %}" alt="" class="our-works__card-main-img our-work-picture">
+                        <div class="our-works__card-images our-works-swiper">
+                            <div class="our-works__card-swiper swiper-wrapper">
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/bath_2.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/bath_3.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/bath_4.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/bath_5.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/bath_6.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                                <div class="our-works__card-swiper-slide swiper-slide">
+                                    <img src="{% static 'main/img/our-works/bath_7.webp' %}" alt="" class="our-works__card-img our-work-picture">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+{% endblock %}

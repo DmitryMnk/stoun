@@ -1,0 +1,90 @@
+{% extends 'main/base.html' %}
+{% block meta_description %}
+    <meta name="description" content="Свяжитесь с нами и мы разработаем изделия из натурального камня на ваш вкус и бюджет. Столешницы, лестницы, раковины, камины, панно, плитка, фонтаны и многое другое из натурального камня. Изготавливаем изделия любой сложности под заказ, собственный цех в г. Астрахань. Доставка по всей России. Широкий ассортимент мрамора, гранита, оникса и других видов камня для ваших изделий. Имеем собственное производство, более 15 лет на рынке и тысячи заказов по всей России. Интерьер, экстерьер, ландшафт. Для дома и бизнеса. Гарантия на изделия. Звоните! Работаем: ежедневно 8:00-19:00 вс-выходной">
+    {% endblock %}
+{% block links %}
+<script src="https://api-maps.yandex.ru/2.1/?apikey=fb0476e3-1097-4986-9340-6cda2195d3e0&lang=ru_RU" type="text/javascript">
+    </script>{% endblock %}
+{% block main %}
+    <section class="contacts">
+        <div class="contacts__container container">
+            <h1 class="contacts__title reset-text">Контакты</h1> 
+            <div class="contacts__content">
+                <div class="contacts__content-left contacts-content-block">
+                    <h3 class="contacts__content-title reset-text">Офис и цех</h3>
+                    <div class="contacts__content-left-block">
+                        <div class="contacts__content-info contacts-phone">
+                            <a href="tel:+79270739734" class="contacts__content-info-text contacts-phone-link reset-link reset-text">+7 (927) 073-97-34</a>
+                        </div>
+
+                        <div class="contacts__content-info contacts-time">
+                            <p class="contacts__content-info-text reset-text">ПН-СБ 9:00-18:00</p>
+                        </div>
+                        <div class="contacts__content-info contacts-location">
+                            <p class="contacts__content-info-text reset-text">Астраханская область,<br>с. Осыпной Бугор, <br>ул. Астраханская, 53В</p>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="contacts__content-right contacts-content-block">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="contacts__req">
+                <h3 class="contacts__content-title reset-text">Реквизиты</h3>
+                <div class="contacts__req-block">
+                    <div class="contacts__req-content">
+                        <div class="contacts__req-content-block req-content-first-block">
+                            <h4 class="contacts__req-content-block-title reset-text">ИП Жеребненко Олег Васильевич</h4>
+                            <p class="contacts__req-content-block-text reset-text">ИНН: 301810169301</p>
+                            <p class="contacts__req-content-block-text reset-text">ОГРНИП: 316302500060604</p>
+                        </div>
+
+                        <div class="contacts__req-content-block">
+                            <h4 class="contacts__req-content-block-title reset-text">Астраханское отделение №8625 ПАО Сбербанк г. Астрахань</h4>
+                            <p class="contacts__req-content-block-text reset-text">р/c: 40802810005000007173</p>
+                            <p class="contacts__req-content-block-text reset-text">к/c: 301101810500000000602</p>
+                            <p class="contacts__req-content-block-text reset-text">БИК: 041203602</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map",
+    { 
+      center: [46.299847, 48.050492], 
+      zoom: 17, 
+      controls: ['zoomControl'] /* Убираем элементы управления*/
+    },
+    { 
+      suppressMapOpenBlock: true, /* Убираем элементы управления*/
+    }
+  );
+
+
+  const myPlacemark = new ymaps.Placemark(
+    [46.299847, 48.050492],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageSize: [60, 60],
+      iconImageOffset: [-20, -40],
+    }
+  );
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.container.fitToViewport();
+}
+</script>
+
+{% endblock %}      
