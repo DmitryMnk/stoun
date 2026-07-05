@@ -1,0 +1,55 @@
+services:
+  web:
+    build:
+      context: ./stounshop
+      dockerfile: Dockerfile
+    container_name: stounshop_web
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./stounshop/db.sqlite3:/app/data/db.sqlite3
+      - ./stounshop/media:/app/media
+      - static_data:/app/static
+    expose:
+      - "8000"
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: stounshop_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/options-ssl-nginx.conf:/etc/nginx/options-ssl-nginx.conf:ro
+      - ./nginx/ssl-dhparams.pem:/etc/nginx/ssl-dhparams.pem:ro
+      - static_data:/app/static:ro
+      - ./stounshop/media:/app/media:ro
+      - certbot_www:/var/www/certbot:ro
+      - certbot_conf:/etc/letsencrypt:ro
+    depends_on:
+      - web
+    command: >
+      /bin/sh -c "while :; do sleep 6h & wait $$$$!; nginx -s reload; done &
+      nginx -g 'daemon off;'"
+
+  certbot:
+    image: certbot/certbot:latest
+    container_name: stounshop_certbot
+    restart: unless-stopped
+    volumes:
+      - certbot_www:/var/www/certbot
+      - certbot_conf:/etc/letsencrypt
+    entrypoint: >
+      /bin/sh -c "trap exit TERM;
+      while :; do
+        certbot renew --webroot -w /var/www/certbot --quiet;
+        sleep 12h & wait $$$$!;
+      done"
+
+volumes:
+  static_data:
+  certbot_www:
+  certbot_conf:

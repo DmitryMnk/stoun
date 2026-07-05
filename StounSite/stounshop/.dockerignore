@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.idea/
+.venv/
+venv/
+env/
+*.sqlite3-journal
+
+static/
+media/
+
+.env
+certbot/

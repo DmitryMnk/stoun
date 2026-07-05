@@ -1,0 +1,4 @@
+.env
+certbot/
+.idea/
+nginx/conf.d/ssl.conf

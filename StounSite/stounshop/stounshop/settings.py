@@ -14,25 +14,36 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x6v$1p=*8(py25eo=pw=*nty8aebe5x$(0*l6l!m7n1!20)brm'
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY',
+    'None',
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'loaclhost',
-    'эстетика-камня.рф',
-    'www.эстетика-камня.рф',
-    'xn----7sbbrpmcrj5alb3lrb.xn--p1ai',
-    'www.xn----7sbbrpmcrj5alb3lrb.xn--p1ai',
+    host.strip()
+    for host in os.environ.get(
+        'DJANGO_ALLOWED_HOSTS',
+        '127.0.0.1,0.0.0.0,localhost,'
+        'эстетика-камня.рф,www.эстетика-камня.рф,'
+        'xn----7sbbrpmcrj5alb3lrb.xn--p1ai,www.xn----7sbbrpmcrj5alb3lrb.xn--p1ai',
+    ).split(',')
+    if host.strip()
 ]
+
+_csrf_origins = os.environ.get('DJANGO_CSRF_TRUSTED_ORIGINS', '')
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip() for origin in _csrf_origins.split(',') if origin.strip()
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
@@ -87,7 +98,7 @@ WSGI_APPLICATION = 'stounshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.environ.get('DJANGO_DB_PATH', str(BASE_DIR / 'db.sqlite3')),
     }
 }
 
