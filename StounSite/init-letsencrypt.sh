@@ -43,9 +43,14 @@ if [ ! -e "$DATA_PATH/conf/options-ssl-nginx.conf" ] || [ ! -e "$DATA_PATH/conf/
     fi
 fi
 
-compose() {
-    docker compose "$@" 2>/dev/null || docker-compose "$@"
-}
+if docker compose version >/dev/null 2>&1; then
+    compose() { docker compose "$@"; }
+elif command -v docker-compose >/dev/null 2>&1; then
+    compose() { docker-compose "$@"; }
+else
+    echo "Docker Compose не найден. Установите docker compose plugin."
+    exit 1
+fi
 
 cp "$DATA_PATH/conf/options-ssl-nginx.conf" ./nginx/options-ssl-nginx.conf
 cp "$DATA_PATH/conf/ssl-dhparams.pem" ./nginx/ssl-dhparams.pem
@@ -60,13 +65,15 @@ compose run --rm --entrypoint "\
     -d $DOMAIN -d www.$DOMAIN \
     --rsa-key-size $RSA_KEY_SIZE \
     --agree-tos \
+    --no-eff-email \
+    --non-interactive \
     --force-renewal" certbot
 
 echo "Активация HTTPS-конфигурации nginx..."
-rm -f ./nginx/conf.d/default.conf
 envsubst '${DOMAIN}' < ./nginx/conf.d/ssl.conf.template > ./nginx/conf.d/ssl.conf
 
-compose exec nginx nginx -s reload
+echo "Перезапуск nginx..."
+compose restart nginx
 
 echo ""
 echo "Готово. Сайт доступен по HTTPS: https://$DOMAIN"
