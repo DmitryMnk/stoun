@@ -34,7 +34,7 @@ urlpatterns = [
     path('', include('main.urls')),
     path('robots.txt', TemplateView.as_view(template_name='main/robots.txt', content_type="text/plain")),
     path('каталог/', include('catalog.urls')),
-    path('favicon.ico', RedirectView.as_view(url=static('base/img/favicon.ico'))),
+    path('favicon.ico', RedirectView.as_view(url='/static/base/img/favicon.ico', permanent=True)),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),

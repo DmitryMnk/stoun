@@ -16,6 +16,11 @@ server {
     include /etc/nginx/options-ssl-nginx.conf;
     ssl_dhparam /etc/nginx/ssl-dhparams.pem;
 
+    include /etc/nginx/mime.types;
+    types {
+        application/javascript mjs;
+    }
+
     client_max_body_size 20M;
 
     location /static/ {
