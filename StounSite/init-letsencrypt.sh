@@ -7,9 +7,13 @@ if [ ! -f .env ]; then
     exit 1
 fi
 
-set -a
-source .env
-set +a
+read_env_var() {
+    grep -m1 "^${1}=" .env | cut -d= -f2- | sed -e "s/^['\"]//" -e "s/['\"]$//"
+}
+
+DOMAIN=$(read_env_var DOMAIN)
+CERTBOT_EMAIL=$(read_env_var CERTBOT_EMAIL)
+export DOMAIN CERTBOT_EMAIL
 
 if [ -z "$DOMAIN" ] || [ -z "$CERTBOT_EMAIL" ]; then
     echo "Укажите DOMAIN и CERTBOT_EMAIL в файле .env"
