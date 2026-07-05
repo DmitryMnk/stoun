@@ -396,6 +396,76 @@
         padding-top: calc(265 / 1440 * 100vw);
     }
 
+    /*-= ABOUT-PAGE =-*/
+
+    .about-page {
+        margin-top: calc(280 / 1440 * 100vw);
+    }
+
+    .about-page__list-item-text {
+        font-size: calc(26 / 1440 * 100vw);
+    }
+
+    .about-page__card-img {
+        width: calc(100 / 1440 * 100vw);
+        height: calc(100 / 1440 * 100vw);
+        margin-bottom: calc(20 / 1440 * 100vw);
+    }
+
+    .about-page__card-title {
+        font-size: calc(26 / 1440 * 100vw);
+        margin-bottom: calc(20 / 1440 * 100vw);
+    }
+
+    .about-page__card-description {
+        font-size: calc(24 / 1440 * 100vw);
+    }
+
+    .service-detail__main-photo {
+        height: calc(400 / 1440 * 100vw);
+    }
+
+    .service-detail__price-title {
+        font-size: calc(30 / 1440 * 100vw);
+        margin-bottom: calc(20 / 1440 * 100vw);
+    }
+
+    .service-detail__price-block-text {
+        font-size: calc(24 / 1440 * 100vw);
+    }
+
+    .service-detail__link {
+        padding: calc(20 / 1440 * 100vw) calc(40 / 1440 * 100vw);
+        font-size: 15px;
+    }
+
+    .service-detail__card {
+        height: calc(120 / 1440 * 100vw);
+    }
+
+    .services-list__card-img {
+        height: calc(280 / 1440 * 100vw);
+    }
+
+    .services-list__card-title {
+        padding-inline: calc(20 / 1440 * 100vw);
+        font-size: calc(24 / 1440 * 100vw);
+    }
+
+    .services-list__card {
+        width: 100%;
+        min-height: calc(450 / 1440 * 100vw);
+        padding-bottom: calc(80 / 1440 * 100vw);
+    }
+
+    .services-list {
+        margin-top: calc(280 / 1440 * 100vw);
+    }
+
+    .about-page__main-text {
+        font-size: calc(28 / 1440 * 100vw);
+        line-height: calc(35 / 1440 * 100vw);
+    }
 }
 
 @media(max-width: 1023px) {
@@ -412,9 +482,9 @@
 
     .header__nav-dot {
         width: 4px;
-        height: 4px;    
+        height: 4px;
     }
-    
+
     .header__nav-list-item-lines {
         width: 13px;
     }
@@ -526,6 +596,34 @@
     .our-works {
         padding-top: calc(160 / 768 * 100vw);
     }
+
+    .about-page__cards-list {
+        gap: 20px;
+    }
+
+    .about-page__cards-list-item {
+        width: calc(100% / 3 - 20px);
+
+    }
+
+    .about-page__list-item-text {
+        font-size: calc(18 / 768 * 100vw);
+    }
+
+    .service-detail__description p {
+        font-size: calc(20 / 1024 * 100vw);
+        font-family: 'MontserratRegular';
+        line-height: calc(25 / 768 * 100vw);
+    }
+
+    .services-list {
+        margin-top: calc(220 / 1024 * 100vw);
+    }
+
+    .about-page__main-text {
+        font-size: calc(20 / 1024 * 100vw);
+        line-height: calc(28 / 1024 * 100vw);
+    }
 }
 
 @media(max-width: 767px) {
@@ -630,7 +728,7 @@
         width: 100%;
         height: calc(150 / 520 * (58vw - 15 / 425 * 100vw));
     }
-    
+
     .services__switcher-card-title {
         font-size: calc(16 / 425 * 100vw);
     }
@@ -787,7 +885,7 @@
         display: none;
     }
 
-    .header__burger { 
+    .header__burger {
         display: block;
     }
     .catalog-page__hide-categories {
@@ -856,7 +954,7 @@
     .catalog-page__close-panel-button {
         display: flex;
     }
-    
+
 
     .catalog-page__panel-title {
         font-size: 28px;
@@ -1041,6 +1139,24 @@
         padding-top: 220px;
     }
 
+    .about-page {
+        margin-top: calc(250 / 768 * 100vw);
+    }
+
+    .service-detail__price-contacts-link {
+        width: calc(120 / 640 * 100vw);
+        height: calc(40 / 640 * 100vw);
+        font-size: calc(14 / 640 * 100vw);
+    }
+
+    .services-list {
+        margin-top: 220px;
+    }
+
+    .about-page__main-text {
+        font-size: 18px;
+        line-height: 26px;
+    }
 }
 
 @media(max-width: 640px) {
@@ -1082,7 +1198,7 @@
     .slider-section__list-item:not(:last-child) {
         margin-right: 0px;
     }
-    
+
     .slider-section__list-item:nth-child(2n-1) {
         margin-right: calc(30 / 640 * 100vw)
     }
@@ -1090,7 +1206,7 @@
     .slider-section__card {
         justify-content: space-between;
     }
-    
+
 
     .slider-section__card-img {
         width: calc(55 / 640* 100vw);
@@ -1136,10 +1252,10 @@
         width: calc(60 / 425 * 100vw);
         height: calc(60 / 425 * 100vw);
     }
-    
+
 
     /* OUR-WORKS */
-    
+
     .our-works__list-item {
         width: calc((100% - 50px) / 2);
         margin-bottom: 50px;
@@ -1228,6 +1344,110 @@
     #map {
         height: 200px;
     }
+
+    .about-page__cards-list {
+        gap: calc(30 / 640 * 100vw);
+    }
+
+    .about-page__cards-list-item {
+        width: calc(100% / 2 - 30 / 640 * 100vw)
+
+    }
+
+    .about-page {
+        margin-top: 230px;
+    }
+
+    .about-page__list-item-text {
+        font-size: calc(18 / 640 * 100vw);
+    }
+
+    .about-page__card {
+        padding: calc(30 / 640 * 100vw);
+    }
+
+    .about-page__card-img {
+        width: calc(90 / 640 * 100vw);
+        height: calc(90 / 640 * 100vw);
+        margin-bottom: calc(20 / 640 * 100vw);
+    }
+
+    .about-page__card-title {
+        font-size: calc(18 / 640 * 100vw);
+        margin-bottom: calc(20 / 640 * 100vw);
+    }
+
+    .about-page__card-description {
+        font-size: calc(16 / 640 * 100vw);
+    }
+
+    /*-= SERVICE-DETAIL =-*/
+
+    .service-detail__content {
+        flex-direction: column;
+    }
+
+    .service-detail__photos {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .service-detail__main-photo {
+        max-height: calc(178 / 240 * 450px);
+        height: calc(333 / 450 * 100vw);
+    }
+
+    .service-detail__card {
+        height: calc(100 / 450 * 100vw);
+        max-height: 100px;
+    }
+
+    .service-detail__price-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .service-detail__price-title {
+        font-size: calc(30 / 640 * 100vw);
+        margin-bottom: calc(20 / 640 * 100vw);
+    }
+
+    .service-detail__price-block-text {
+        font-size: calc(22 / 640 * 100vw);
+    }
+
+    .service-detail__description p {
+        font-size: calc(22 / 640 * 100vw);
+        line-height: calc(26 / 640 * 100vw);
+    }
+
+    .service-detail__price-contacts-link {
+        width: calc(120 / 425 * 100vw);
+        height: calc(40 / 425 * 100vw);
+        font-size: calc(14 / 425 * 100vw);
+    }
+
+    .services-list__list-item {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .services-list__card {
+        width: 100%;
+        min-height: calc(250 / 640 * 100vw);
+        padding-bottom: calc(40 / 640* 100vw);
+    }
+
+    .services-list__card-title {
+        padding-inline: calc(15 / 640* 100vw);
+        font-size: calc(18 / 640 * 100vw);
+    }
+
+    .services-list__card-img {
+        height: calc(196 / 640 * 100vw);
+        margin-bottom: calc(20 / 640 * 100vw);
+    }
+
 
 }
 
@@ -1346,7 +1566,7 @@
     .catalog-page__show-categories-title {
         font-size: calc(16 / 320 * 100vw);
         margin-right: calc(3 / 320 * 100vw);
-    } 
+    }
 
     .catalog-page__show-categories-svg {
         height: calc(12 / 320 * 100vw);
@@ -1380,6 +1600,58 @@
     .contacts__content-info {
         background-size: 18px;
         padding-left: 25px;
+    }
+
+    .about-page__list-item-text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+    .about-page__cards-list {
+        gap: 20px;
+    }
+
+    .about-page__cards-list-item {
+        width: 100%;
+    }
+
+    .about-page__card-img {
+        width: calc(100 / 425 * 100vw);
+        height: calc(100 / 425 * 100vw);
+        margin-bottom: calc(20 / 425 * 100vw);
+    }
+
+    .about-page__card-title {
+        font-size: calc(20 / 425 * 100vw);
+        margin-bottom: calc(20 / 425 * 100vw);
+    }
+
+    .about-page__card-description {
+        font-size: calc(18 / 425 * 100vw);
+    }
+
+    .services-list__list-item {
+        width: 100%;
+    }
+
+    .services-list__card-title {
+        padding-inline: calc(10 / 320 * 100vw);
+        font-size: calc(15 / 320 * 100vw);
+    }
+
+    .services-list__card-img {
+        height: calc(150 / 320 * 100vw);
+        margin-bottom: calc(20 / 640* 100vw);
+    }
+
+    .services-list__card {
+        min-height: calc(250 / 640* 100vw);
+    }
+
+    .about-page__main-text {
+        font-size: 15px;
+        line-height: 22px;
     }
 }
 

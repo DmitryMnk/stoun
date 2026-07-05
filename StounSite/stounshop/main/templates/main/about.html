@@ -1,18 +1,109 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block meta_description %}
-    <meta name="description" content="Более 15 лет мы занимаемя изготовлением издедий из натурального камня. Столешницы, лестницы, раковины, камины, панно, плитка, фонтаны и многое другое из натурального камня. Изготавливаем изделия любой сложности под заказ, собственный цех в г. Астрахань. Доставка по всей России. Широкий ассортимент мрамора, гранита, оникса и других видов камня для ваших изделий. Имеем собственное производство, более 15 лет на рынке и тысячи заказов по всей России. Интерьер, экстерьер, ландшафт. Для дома и бизнеса. Гарантия на изделия. Звоните! Работаем: ежедневно 8:00-19:00 вс-выходной">
+    <meta name="description" content="{{description}}">
 {% endblock %}
 
 {% block main%}
 
     <section class="about-page">
         <div class="about-page__container container">
-            <h1 class="contacts__title reset-text">О компании</h1> 
+            <h1 class="contacts__title reset-text">О компании</h1>
+            <p class="about-page__main-text reset-text">
+                Наша компания на рынке более 15 лет, за это время построили собственный цех полного цикла производства и выполнили 3000+ заказов по всей стране. Мы предлагаем широкий спектр услуг по изготовлению изделий из натурального или искусственного камня, среди который столешницы, подоконники, ступени, порталы для каминов, столешницы со встроенной раковиной и многое другое - готовы воплотить в жизнь любые ваши идеи и создать уникальные предметы интерьера и экстерьера, которые будут радовать вас своей красотой и функциональностью на протяжении многих лет.
+            </p>
+            <p class="about-page__main-text reset-text">
+                Команда опытных специалистов гарантирует высокое качество изделий и скорость их изготовления. Мы уверены, что наши преимущества делают нас одним из лучших производителей изделий из натурального камня на рынке РФ. Производим все необходимые замеры, разрабатываем индивидуальный дизайн по требованиям заказчика, изготавливаем, доставляем и монтируем все изделия сами, а Вам остается только наслаждаться полученным результатом.
+            </p>
+            <h2 class="about__title section-title reset-text">Как мы работаем</h2> 
             <div class="about-page__content">
-                
+                <ul class="about-page__list">
+                    <li class="about-page__list-item">
+                        <p class="about-page__list-item-text reset-text">
+                            Поможем выбрать цвет и текстуру камня, оптимально подходящие под ваши пожелания
+                        </p>
+                    </li>
+                    <li class="about-page__list-item">
+                        <p class="about-page__list-item-text reset-text">
+                            Разработаем уникальное изделие, которое идеально впишется в требования и указанный бюджет
+                        </p>
+                    </li>
+                    <li class="about-page__list-item">
+                        <p class="about-page__list-item-text reset-text">
+                            Встретимся в офисе и покажем производство, образцы камня и изделий, заключим контракт на изготовление
+                        </p>
+                    </li>
+                    <li class="about-page__list-item">
+                        <p class="about-page__list-item-text reset-text">
+                            Согласуем день и время для проведения замеров, осуществим их и приступим к изготовлению                        </p>
+                    </li>
+                    <li class="about-page__list-item">
+                        <p class="about-page__list-item-text reset-text">
+                            По готовности изделия мы произведем монтаж и предоставим гарантию                        </p>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="about__title section-title reset-text">Наши преимущества</h2>
+            <div class="about-page__content">
+                <ul class="about-page__cards-list reset-list">
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_1.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Гарантии<br>качества</h3>
+                            <p class="about-page__card-description reset-text">Мы предоставляем гарантию на все наши изделия и осуществляем их ремонт в случае возникновения дефектов в течении года</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_2.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Бесплатная<br>доставка</h3>
+                            <p class="about-page__card-description reset-text">Доставка осуществляется бесплатно</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_3.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Качественные<br>материалы</h3>
+                            <p class="about-page__card-description reset-text">Мы используем только высококачественные материалы, которые обеспечивают прочность и долговечность наших изделий.</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_4.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Собственное<br>производство</h3>
+                            <p class="about-page__card-description reset-text">Все изделия изготавливаем самостоятельно в собственном цеху</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_5.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Индивидуальный<br>подход</h3>
+                            <p class="about-page__card-description reset-text">Мы учитываем все пожелания наших клиентов и создаём изделия, которые соответствуют их потребностям и бюджету.</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_6.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Широкий<br>ассортимент</h3>
+                            <p class="about-page__card-description reset-text">Мы предлагаем широкий ассортимент изделий из натурального камня, включая столешницы, подоконники, камины, лестницы, фонтаны, садовые дорожки и многое другое.</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_7.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Опыт и<br>мастерство</h3>
+                            <p class="about-page__card-description reset-text">Наша команда состоит из опытных мастеров, которые имеют большой опыт работы с натуральным камнем.</p>
+                        </div>
+                    </li>
+                    <li class="about-page__cards-list-item">
+                        <div class="about-page__card">
+                            <img src="{% static 'main/img/about/about_8.png' %}" alt="" class="about-page__card-img">
+                            <h3 class="about-page__card-title reset-text">Работаем<br>в срок</h3>
+                            <p class="about-page__card-description reset-text">Мы соблюдаем установленные сроки выполнения заказов и гарантируем своевременную доставку изделий.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
-
 {% endblock %}
